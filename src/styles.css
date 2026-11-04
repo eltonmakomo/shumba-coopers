@@ -199,4 +199,6 @@
   & table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.92rem; }
   & td, & th { border: 1px solid var(--border); padding: 0.5rem 0.75rem; text-align: left; vertical-align: top; }
   & tr:nth-child(odd) td { background: var(--muted); }
+  & td:first-child { font-weight: 700; color: var(--forest); width: 28%; }
+  & td p:last-child { margin-bottom: 0; }
 }
