@@ -2,7 +2,10 @@ import { Link } from "@tanstack/react-router";
 import { ChevronRight } from "lucide-react";
 import type { ReactNode } from "react";
 
-export type Crumb = { label: string; to?: string; params?: Record<string, string> };
+export type Crumb =
+  | { label: string; to?: undefined }
+  | { label: string; to: "/products" | "/about" | "/contact" }
+  | { label: string; to: "/category/$slug"; params: { slug: string } };
 
 export function PageHero({ title, image, crumbs, children }: { title: string; image: string; crumbs: Crumb[]; children?: ReactNode }) {
   return (
@@ -15,8 +18,10 @@ export function PageHero({ title, image, crumbs, children }: { title: string; im
           {crumbs.map((c, i) => (
             <span key={i} className="flex items-center gap-1">
               <ChevronRight className="size-3.5" />
-              {c.to ? (
+              {c.to === "/category/$slug" ? (
                 <Link to={c.to} params={c.params} className="hover:text-sun">{c.label}</Link>
+              ) : c.to ? (
+                <Link to={c.to} className="hover:text-sun">{c.label}</Link>
               ) : (
                 <span className="text-forest-foreground">{c.label}</span>
               )}

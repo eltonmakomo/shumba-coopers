@@ -29,7 +29,7 @@ function Tech() {
       </PageHero>
       <div className="mx-auto grid max-w-7xl gap-5 px-4 py-20 sm:px-6 md:grid-cols-3">
         {rest.map((p, i) => {
-          const Icon = icons[i + 1];
+          const Icon = icons[i + 1] ?? Users;
           return (
             <div key={p} className="rounded-3xl border bg-card p-7 shadow-soft">
               <span className="grid size-12 place-items-center rounded-2xl bg-sun-gradient text-sun-foreground">

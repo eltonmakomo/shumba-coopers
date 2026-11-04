@@ -104,13 +104,13 @@ export function SiteHeader() {
       {open && (
         <div className="max-h-[80vh] overflow-y-auto border-t bg-card px-4 pb-6 lg:hidden">
           <nav className="flex flex-col gap-1 pt-3" aria-label="Mobile">
-            {[
+            {([
               ["/", "Home"],
               ["/about", "About Us"],
               ["/products", "All Products"],
               ["/technical-services", "Technical Services"],
               ["/contact", "Contact Us"],
-            ].map(([to, label]) => (
+            ] as const).map(([to, label]) => (
               <Link key={to} to={to} onClick={() => setOpen(false)} className="rounded-xl px-3 py-2.5 font-medium hover:bg-muted">
                 {label}
               </Link>

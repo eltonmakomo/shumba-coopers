@@ -17,6 +17,6 @@ describe("distributor data", () => {
   });
 
   it("does not make extensions dialable", () => {
-    expect(phoneLinks("EXT 218/219")[0].href).toBeNull();
+    expect(phoneLinks("EXT 218/219")[0]?.href).toBeNull();
   });
 });

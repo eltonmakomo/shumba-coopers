@@ -9,10 +9,14 @@ import { cn } from "@/lib/utils";
 type Search = { province?: string; q?: string };
 
 export const Route = createFileRoute("/find-a-distributor")({
-  validateSearch: (s: Record<string, unknown>): Search => ({
-    province: typeof s.province === "string" && provinces.includes(s.province) ? s.province : undefined,
-    q: typeof s.q === "string" && s.q ? s.q : undefined,
-  }),
+  validateSearch: (s: Record<string, unknown>): Search => {
+    const out: Search = {};
+    const p = s["province"];
+    const q = s["q"];
+    if (typeof p === "string" && provinces.includes(p)) out.province = p;
+    if (typeof q === "string" && q) out.q = q;
+    return out;
+  },
   head: () => ({
     meta: [
       { title: "Find Your Distributor — Shumba Coopers" },
@@ -32,7 +36,16 @@ function Finder() {
   const [q, setQ] = useState(initialQ);
 
   const setProvince = (p: string | null) =>
-    navigate({ search: (prev) => ({ ...prev, province: p ?? undefined }), replace: true, resetScroll: false });
+    navigate({
+      search: (prev) => {
+        const next: Search = {};
+        if (prev.q) next.q = prev.q;
+        if (p) next.province = p;
+        return next;
+      },
+      replace: true,
+      resetScroll: false,
+    });
 
   const results = useMemo(() => searchBranches(branches, q, province), [q, province]);
   const inProvince = province ? branches.filter((b) => b.province === province) : branches;

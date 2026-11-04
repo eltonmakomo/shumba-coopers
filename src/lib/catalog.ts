@@ -81,7 +81,8 @@ const sectionImages: Record<string, string> = {
 };
 
 export function imageFor(node: CategoryNode): string {
-  if (sectionImages[node.slug]) return sectionImages[node.slug];
+  const own = sectionImages[node.slug];
+  if (own) return own;
   const first = getProductsFor(node).find((p) => p.image) ?? getChildren(node).flatMap(getProductsFor).find((p) => p.image);
   if (first?.image) return first.image;
   return node.parent ? imageFor(getCategory(node.parent)!) : heroCattle;

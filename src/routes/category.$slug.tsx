@@ -41,7 +41,7 @@ function CategoryPage() {
   const crumbs: Crumb[] = [
     { label: "Products", to: "/products" },
     ...trail.map((t, i) =>
-      i === trail.length - 1 ? { label: t.title } : { label: t.title, to: "/category/$slug", params: { slug: t.slug } },
+      i === trail.length - 1 ? { label: t.title } : { label: t.title, to: "/category/$slug" as const, params: { slug: t.slug } },
     ),
   ];
 

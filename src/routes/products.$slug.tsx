@@ -80,7 +80,7 @@ function ProductPage() {
       {related.length > 0 && (
         <section className="bg-muted/60">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
-            <h2 className="text-3xl font-extrabold">More in {primary.title}</h2>
+            <h2 className="text-3xl font-extrabold">More in {primary!.title}</h2>
             <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {related.map((r) => (
                 <ProductCard key={r.slug} product={r} />
