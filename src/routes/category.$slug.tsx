@@ -47,7 +47,7 @@ function CategoryPage() {
 
   return (
     <>
-      <PageHero title={parent && parent.parent ? `${parent.title} · ${node.title}` : node.title} image={imageFor(node)} crumbs={crumbs}>
+      <PageHero title={parent && parent.parent ? `${parent.title} · ${node.title}` : node.title} image={imageFor(node, false)} crumbs={crumbs}>
         {node.intro?.map((p) => (
           <p key={p} className="mb-3">{p}</p>
         ))}

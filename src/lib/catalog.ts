@@ -80,12 +80,13 @@ const sectionImages: Record<string, string> = {
   "grain-protection": grainImg,
 };
 
-export function imageFor(node: CategoryNode): string {
+export function imageFor(node: CategoryNode, allowProduct = true): string {
   const own = sectionImages[node.slug];
   if (own) return own;
+  if (!allowProduct) return node.parent ? imageFor(getCategory(node.parent)!, false) : heroCattle;
   const first = getProductsFor(node).find((p) => p.image) ?? getChildren(node).flatMap(getProductsFor).find((p) => p.image);
   if (first?.image) return first.image;
-  return node.parent ? imageFor(getCategory(node.parent)!) : heroCattle;
+  return node.parent ? imageFor(getCategory(node.parent)!, false) : heroCattle;
 }
 
 /** Plain-text excerpt from the product's first description paragraph. */
