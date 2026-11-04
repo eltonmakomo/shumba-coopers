@@ -1,0 +1,962 @@
+[
+ {
+  "id": 1,
+  "branch": "BANKET",
+  "landline": "0672142600",
+  "mobile": "0772137188",
+  "address": "3 Wilmar Park, Banket",
+  "email": "zivanaigu@farmandcity.co.zw",
+  "manager": "Z GUNHA",
+  "province": "Mashonaland West"
+ },
+ {
+  "id": 2,
+  "branch": "BINDURA",
+  "landline": "0662106885",
+  "mobile": "0772137062",
+  "address": "111 Thurlow Avenue, Bindura",
+  "email": "timothych@farmandcity.co.zw",
+  "manager": "T CHIPENYA",
+  "province": "Mashonaland Central"
+ },
+ {
+  "id": 3,
+  "branch": "BULAWAYO 10TH",
+  "landline": "0292264642-3",
+  "mobile": "0772137123",
+  "address": "102 J Moyo Avenue, Bulawayo",
+  "email": "matthewsi@farmandcity.co.zw",
+  "manager": "M.SIBANDA",
+  "province": "Bulawayo"
+ },
+ {
+  "id": 4,
+  "branch": "BULAWAYO FIFE STREET",
+  "landline": "0292276457",
+  "mobile": "0773719842",
+  "address": "Haddon and Sly Building, Bulawayo",
+  "email": "obediencech@farmandcity.co.zw",
+  "manager": "O CHINGWENA",
+  "province": "Bulawayo"
+ },
+ {
+  "id": 5,
+  "branch": "BULAWAYO LOBENGULA",
+  "landline": "0292882872",
+  "mobile": "0772137083",
+  "address": "99 Lobengula St",
+  "email": "madlenkosi.hadebe@farmandcity.co.zw",
+  "manager": "M. HADEBE",
+  "province": "Bulawayo"
+ },
+ {
+  "id": 6,
+  "branch": "CHEGUTU HARDWARE",
+  "landline": "682152416",
+  "mobile": "0773275821",
+  "address": "191 Queen Street, Chegutu",
+  "email": "oniasgo@farmandcity.co.zw",
+  "manager": "O. GOTO",
+  "province": "Mashonaland West"
+ },
+ {
+  "id": 7,
+  "branch": "CHINHOYI H/W",
+  "landline": "2672125286",
+  "mobile": "0772137140",
+  "address": "Cnr Magamba Way/ R Mugabe Rd",
+  "email": "aloismu@farmandcity.co.zw",
+  "manager": "A. MUGURA",
+  "province": "Mashonaland West"
+ },
+ {
+  "id": 8,
+  "branch": "CHIPINGE",
+  "landline": "272042691",
+  "mobile": "0774362802",
+  "address": "Joubert Street Chipinge",
+  "email": "liberty.makoni@farmandcity.co.zw",
+  "manager": "L MAKONI",
+  "province": "Manicaland"
+ },
+ {
+  "id": 9,
+  "branch": "CHIREDZI",
+  "landline": "2312312838",
+  "mobile": "0772137089",
+  "address": "Knobtorn Road Chiredzi",
+  "email": "simonmu@farmandcity.co.zw",
+  "manager": "S.MUGONI",
+  "province": "Masvingo"
+ },
+ {
+  "id": 10,
+  "branch": "CHITUNGWIZA - MAKONI",
+  "landline": "",
+  "mobile": "0774134956",
+  "address": "Shop 3, 16133 Makoni Shopping Centre, Chitungwiza",
+  "email": "mcdonald.kamoto@farmandcity.co.zw",
+  "manager": "M. KAMOTO",
+  "province": "Harare"
+ },
+ {
+  "id": 11,
+  "branch": "CHIVHU",
+  "landline": "542122432",
+  "mobile": "0788593640",
+  "address": "393 York Street Chivhu",
+  "email": "governorsv@farmandcity.co.zw",
+  "manager": "G. SVOSVE",
+  "province": "Mashonaland East"
+ },
+ {
+  "id": 12,
+  "branch": "GLENDALE",
+  "landline": "0662182567",
+  "mobile": "0772137076",
+  "address": "1 Main Square Glendale",
+  "email": "rachael.gumunyu@farmandcity.co.zw",
+  "manager": "R. GUMUNYU",
+  "province": "Mashonaland Central"
+ },
+ {
+  "id": 13,
+  "branch": "GOKWE",
+  "landline": "0592676",
+  "mobile": "0772137137",
+  "address": "Stand 11 Mateta Rd",
+  "email": "nelietti@farmandcity.co.zw",
+  "manager": "N TIRIVANHU",
+  "province": "Midlands"
+ },
+ {
+  "id": 14,
+  "branch": "GURUVE",
+  "landline": "0662172314",
+  "mobile": "0772137186",
+  "address": "Stand 56 Shamwari Store Guruve",
+  "email": "faraima@farmandcity.co.zw",
+  "manager": "F. MAKOMBE",
+  "province": "Mashonaland Central"
+ },
+ {
+  "id": 15,
+  "branch": "GUTU",
+  "landline": "",
+  "mobile": "0717288511",
+  "address": "Stand 373 Mupandawana, Gutu",
+  "email": "romeoch@farmandcity.co.zw",
+  "manager": "R.CHIPUNGU",
+  "province": "Masvingo"
+ },
+ {
+  "id": 16,
+  "branch": "GWANDA",
+  "landline": "",
+  "mobile": "0772850913",
+  "address": "890 1st avenue Gwanda",
+  "email": "remedysh@farmandcity.co.zw",
+  "manager": "R. SHAVA",
+  "province": "Matabeleland South"
+ },
+ {
+  "id": 17,
+  "branch": "GWERU 3RD",
+  "landline": "0542225941",
+  "mobile": "0772458255",
+  "address": "3rd Street Gweru",
+  "email": "christopherma@farmandcity.co.zw",
+  "manager": "C .MATANHIRE",
+  "province": "Midlands"
+ },
+ {
+  "id": 18,
+  "branch": "GWERU MAIN",
+  "landline": "0542226010",
+  "mobile": "0783362850",
+  "address": "29 Josia Tongogara Ave",
+  "email": "lloydmu@farmandcity.co.zw",
+  "manager": "E. SIBEKE",
+  "province": "Midlands"
+ },
+ {
+  "id": 19,
+  "branch": "HARARE BEATRICE RD",
+  "landline": "3230",
+  "mobile": "0778170140",
+  "address": "Langford Farm Barrington Rd Harare",
+  "email": "mollinma@farmandcity.co.zw",
+  "manager": "M MAWIRE",
+  "province": "Harare"
+ },
+ {
+  "id": 20,
+  "branch": "HARARE BELGRAVIA",
+  "landline": "",
+  "mobile": "0771166684/0779476442",
+  "address": "No. 1 Sheffield Terrace Belgravia shopping Centre Harare",
+  "email": "tamary.karenyi@farmandcity.co.zw",
+  "manager": "T. KARENYI",
+  "province": "Harare"
+ },
+ {
+  "id": 21,
+  "branch": "HARARE BORROWDALE",
+  "landline": "",
+  "mobile": "0779467237/0779758126",
+  "address": "Borrowdale Road",
+  "email": "david.dube@farmandcity.co.zw",
+  "manager": "D.DUBE",
+  "province": "Harare"
+ },
+ {
+  "id": 22,
+  "branch": "HARARE BUILDER CITY",
+  "landline": "EXT 218/219",
+  "mobile": "0712596726",
+  "address": "1 Wynne St Harare",
+  "email": "tafadzwaba@farmandcity.co.zw",
+  "manager": "T BAARA",
+  "province": "Harare"
+ },
+ {
+  "id": 23,
+  "branch": "HARARE H/W",
+  "landline": "EXT 121",
+  "mobile": "0772137104",
+  "address": "1 Wynne St Harare",
+  "email": "kudakwasheku@farmandcity.co.zw",
+  "manager": "K KUNYONGANA",
+  "province": "Harare"
+ },
+ {
+  "id": 24,
+  "branch": "HARARE HORTICULTURE",
+  "landline": "EXT 201",
+  "mobile": "0772137185",
+  "address": "1 Wynne St Harare",
+  "email": "cleopatra.nhekeya@farmandcity.co.zw",
+  "manager": "C. NHEKEYA",
+  "province": "Harare"
+ },
+ {
+  "id": 25,
+  "branch": "HARARE KOPJE",
+  "landline": "0242752735/3235",
+  "mobile": "0783415004",
+  "address": "31 Remembrance Drive",
+  "email": "wesley.chapanga@farmandcity.co.zw",
+  "manager": "W. CHAPANGA",
+  "province": "Harare"
+ },
+ {
+  "id": 26,
+  "branch": "HARARE MADOKERO",
+  "landline": "",
+  "mobile": "0716556449",
+  "address": "Shop Number 45 & 47 Madokero Mall, Stand 14567 Tynwald",
+  "email": "tatendama@farmandcity.co.zw",
+  "manager": "T. MASHINGAIDZE",
+  "province": "Harare"
+ },
+ {
+  "id": 27,
+  "branch": "HARARE MBARE",
+  "landline": "0242772853",
+  "mobile": "0772137119",
+  "address": "Shop 18 OK Plaza Mbare Musika Harare",
+  "email": "naumema@farmandcity.co.zw",
+  "manager": "N MANGWAYANA",
+  "province": "Harare"
+ },
+ {
+  "id": 28,
+  "branch": "HARARE MSASA",
+  "landline": "242447301",
+  "mobile": "0717622468",
+  "address": "104 Mutare Road Msasa",
+  "email": "hilda.chiwenga@farmandcity.co.zw",
+  "manager": "H CHIWENGA",
+  "province": "Harare"
+ },
+ {
+  "id": 29,
+  "branch": "HARARE MSASA NEW",
+  "landline": "",
+  "mobile": "0782249469",
+  "address": "Stand 226 Mutare Road, Harare",
+  "email": "nicollama@farmandcity.co.zw",
+  "manager": "N. MASUMBUKO",
+  "province": "Harare"
+ },
+ {
+  "id": 30,
+  "branch": "HARARE POMONA",
+  "landline": "3231",
+  "mobile": "0772147968",
+  "address": "Stand no. 3495 Pomona Borrowdale",
+  "email": "aaron.masunungure@farmandcity.co.zw",
+  "manager": "A MASUNUNGURE",
+  "province": "Harare"
+ },
+ {
+  "id": 31,
+  "branch": "HARARE STOCK FEED CENTRE",
+  "landline": "EXT 175",
+  "mobile": "0772395229",
+  "address": "1 Wynne St Harare",
+  "email": "primerosemu@farmandcity.co.zw",
+  "manager": "P MAZANI",
+  "province": "Harare"
+ },
+ {
+  "id": 32,
+  "branch": "HARARE VET CENTRE",
+  "landline": "EXT 164",
+  "mobile": "0774121537",
+  "address": "1 Wynne St Harare",
+  "email": "yvonne.mureverwi@farmandcity.co.zw",
+  "manager": "Y. MUREVERWI",
+  "province": "Harare"
+ },
+ {
+  "id": 33,
+  "branch": "HAUNA",
+  "landline": "0262092492",
+  "mobile": "0772137201",
+  "address": "Stand 91/92&93 Hauna township",
+  "email": "herbertka@farmandcity.co.zw",
+  "manager": "H KAMBARANDA",
+  "province": "Manicaland"
+ },
+ {
+  "id": 34,
+  "branch": "HWEDZA",
+  "landline": "",
+  "mobile": "0715252710",
+  "address": "N.O 500 Hwedza Business Centre",
+  "email": "ishmaelka@farmandcity.co.zw",
+  "manager": "I. KACHEDWA",
+  "province": "Mashonaland East"
+ },
+ {
+  "id": 35,
+  "branch": "JERERA",
+  "landline": "",
+  "mobile": "0774842573",
+  "address": "Stand 2739-2740 Jerera Growth Point, Zaka",
+  "email": "stellama@farmandcity.co.zw",
+  "manager": "S.MACHUWAIRE",
+  "province": "Masvingo"
+ },
+ {
+  "id": 36,
+  "branch": "KADOMA H/W",
+  "landline": "0682122202",
+  "mobile": "0772458266",
+  "address": "333/4 J Tongogara Ave",
+  "email": "hamilton.vunganayi@farmandcity.co.zw",
+  "manager": "HAMILTON VUNGANAYI",
+  "province": "Mashonaland West"
+ },
+ {
+  "id": 37,
+  "branch": "KADOMA TOWN",
+  "landline": "0682122749",
+  "mobile": "0772137105",
+  "address": "No 464-11 Chimoyo Rd Kadoma",
+  "email": "maxwellmu@farmandcity.co.zw",
+  "manager": "M. MUPEDZI",
+  "province": "Mashonaland West"
+ },
+ {
+  "id": 38,
+  "branch": "KAROI",
+  "landline": "061256471",
+  "mobile": "0772137111",
+  "address": "16 Freddy Johnson Road Karoi",
+  "email": "hillaryma@farmandcity.co.zw",
+  "manager": "H. MAPFUMO",
+  "province": "Mashonaland West"
+ },
+ {
+  "id": 39,
+  "branch": "KWEKWE MAIN",
+  "landline": "552523581",
+  "mobile": "0772137128",
+  "address": "Wilcania Street",
+  "email": "energyko@farmandcity.co.zw",
+  "manager": "E. KONZO",
+  "province": "Midlands"
+ },
+ {
+  "id": 40,
+  "branch": "KWEKWE TOWN",
+  "landline": "0552521137",
+  "mobile": "0772458288",
+  "address": "No 8 Robert Mugabe way Kwekwe",
+  "email": "willard.makwiramiti@farmandcity.co.zw",
+  "manager": "W.MAKWIRAMITI",
+  "province": "Midlands"
+ },
+ {
+  "id": 41,
+  "branch": "MACHEKE",
+  "landline": "",
+  "mobile": "0785974564",
+  "address": "757 Eldoraldo Road, Macheke",
+  "email": "lin.mutsena@farmandcity.co.zw",
+  "manager": "L. MUTSENA",
+  "province": "Mashonaland East"
+ },
+ {
+  "id": 42,
+  "branch": "MAGUNJE",
+  "landline": "",
+  "mobile": "0784617175",
+  "address": "Stand 279 Magunje Growth Point",
+  "email": "naomibw@farmandcity.co.zw",
+  "manager": "N. BWANALI",
+  "province": "Mashonaland West"
+ },
+ {
+  "id": 43,
+  "branch": "MARONDERA MAIN",
+  "landline": "06523233534",
+  "mobile": "0772137139",
+  "address": "5 Birmingham Road Marondera",
+  "email": "shamemu@farmandcity.co.zw",
+  "manager": "S .MUTERERWA",
+  "province": "Mashonaland East"
+ },
+ {
+  "id": 44,
+  "branch": "MARONDERA TOWN",
+  "landline": "065232320351",
+  "mobile": "0771940616",
+  "address": "No 1511 Pine Street Extension Marondera",
+  "email": "wilsonch@farmandcity.co.zw",
+  "manager": "W CHIMONYO",
+  "province": "Mashonaland East"
+ },
+ {
+  "id": 45,
+  "branch": "MASVINGO MAIN",
+  "landline": "0392264246",
+  "mobile": "0776336099",
+  "address": "95 L Takawira Street",
+  "email": "miriroch@farmandcity.co.zw",
+  "manager": "M CHIKANGA",
+  "province": "Masvingo"
+ },
+ {
+  "id": 46,
+  "branch": "MASVINGO R.MUGABE",
+  "landline": "392261704",
+  "mobile": "0772137202",
+  "address": "Stand no. 403 Robert Mugabe\u00a0Way",
+  "email": "vengaide@farmandcity.co.zw",
+  "manager": "V. DEFU",
+  "province": "Masvingo"
+ },
+ {
+  "id": 47,
+  "branch": "MHANGURA",
+  "landline": "672145468",
+  "mobile": "0772137077",
+  "address": "Stand 521 Lions Den Road",
+  "email": "eliaska@farmandcity.co.zw",
+  "manager": "E KADYARIDZIRE",
+  "province": "Mashonaland West"
+ },
+ {
+  "id": 48,
+  "branch": "MT. DARWIN",
+  "landline": "0662122598",
+  "mobile": "0772137182",
+  "address": "Stand 17B Main Street Mt Darwin",
+  "email": "taurayiba@farmandcity.co.zw",
+  "manager": "T BARANGWE",
+  "province": "Mashonaland Central"
+ },
+ {
+  "id": 49,
+  "branch": "MURAMBINDA",
+  "landline": "",
+  "mobile": "0716025304",
+  "address": "Stand 3600, Murambinda Growth Point",
+  "email": "allen.nyakutsikwa@farmandcity.co.zw",
+  "manager": "A.NYAKUTSIKWA",
+  "province": "Manicaland"
+ },
+ {
+  "id": 50,
+  "branch": "MUREHWA DEPOT",
+  "landline": "0652122221",
+  "mobile": "0771309916",
+  "address": "564 D Karimanzira Street",
+  "email": "locadia.mureri@farmandcity.co.zw",
+  "manager": "L. MURERI",
+  "province": "Mashonaland East"
+ },
+ {
+  "id": 51,
+  "branch": "MUROMBEDZI",
+  "landline": "",
+  "mobile": "0783981894",
+  "address": "Stand 259 , Shop Number 2, Murombedzi",
+  "email": "goodshow.chiremba@farmandcity.co.zw",
+  "manager": "G. CHIREMBA",
+  "province": "Mashonaland West"
+ },
+ {
+  "id": 52,
+  "branch": "MUTARE",
+  "landline": "02060212",
+  "mobile": "0772137050",
+  "address": "5 E Avenue Mutare",
+  "email": "joshuach@farmandcity.co.zw",
+  "manager": "J. CHAKANYUKA",
+  "province": "Manicaland"
+ },
+ {
+  "id": 53,
+  "branch": "MUTARE SAKUBVA",
+  "landline": "02061073",
+  "mobile": "0784082045",
+  "address": "Stand No 1744 Chimanamani Rd Sakubva NSSA",
+  "email": "joycema@farmandcity.co.zw",
+  "manager": "J MUCHUWAIRE",
+  "province": "Manicaland"
+ },
+ {
+  "id": 54,
+  "branch": "MUTOKO",
+  "landline": "0652132617",
+  "mobile": "0772137196",
+  "address": "Stand 9 2 Chinzanga t/ship Mutoko",
+  "email": "lameck.masona@farmandcity.co.zw",
+  "manager": "S. MATARUSE",
+  "province": "Mashonaland East"
+ },
+ {
+  "id": 55,
+  "branch": "MVUMA",
+  "landline": "",
+  "mobile": "0784557904",
+  "address": "7010 Central Estates, Willoughby Road, Mvuma",
+  "email": "liberty.chinherende@farmandcity.co.zw",
+  "manager": "L. CHINHERENDE",
+  "province": "Midlands"
+ },
+ {
+  "id": 56,
+  "branch": "MVURWI",
+  "landline": "0662162499",
+  "mobile": "0772137052",
+  "address": "Cnr Cartham Ave/ Ferguson Rd",
+  "email": "tatendate@farmandcity.co.zw",
+  "manager": "T. TEEDZA",
+  "province": "Mashonaland Central"
+ },
+ {
+  "id": 57,
+  "branch": "NORTON",
+  "landline": "",
+  "mobile": "0784880970",
+  "address": "1 Endevour Rd Norton",
+  "email": "abishai.mabena@farmandcity.co.zw",
+  "manager": "A.MABENA",
+  "province": "Mashonaland West"
+ },
+ {
+  "id": 58,
+  "branch": "NYANGA",
+  "landline": "0262098115",
+  "mobile": "0772137079",
+  "address": "Stand 120 Nyanga",
+  "email": "simbaraisheka@farmandcity.co.zw",
+  "manager": "S KAWANI",
+  "province": "Manicaland"
+ },
+ {
+  "id": 59,
+  "branch": "NYAZURA",
+  "landline": "252055228",
+  "mobile": "0712940421/0781-7842512",
+  "address": "Stand no. 123 Nyazura Township",
+  "email": "tariroch@farmandcity.co.zw",
+  "manager": "T CHIRIGA",
+  "province": "Manicaland"
+ },
+ {
+  "id": 60,
+  "branch": "NYIKA",
+  "landline": "",
+  "mobile": "0773482816",
+  "address": "Stand 710 Nyika Growth Point",
+  "email": "elizabeth.mtisi@farmandcity.co.zw",
+  "manager": "E. MTISI",
+  "province": "Masvingo"
+ },
+ {
+  "id": 61,
+  "branch": "ODZI",
+  "landline": "",
+  "mobile": "0771678606",
+  "address": "P.O Box 51 Odzi",
+  "email": "nyasha.chahweta@farmandcity.co.zw",
+  "manager": "N.CHAHWETA",
+  "province": "Manicaland"
+ },
+ {
+  "id": 62,
+  "branch": "RUSAPE DEPOT",
+  "landline": "0252022199",
+  "mobile": "0776608646",
+  "address": "70 Magamba Way Rusape",
+  "email": "rutendo.mateva@farmandcity.co.zw",
+  "manager": "R MATEVA",
+  "province": "Manicaland"
+ },
+ {
+  "id": 63,
+  "branch": "RUSAPE MAIN",
+  "landline": "02252052349/2433",
+  "mobile": "0772137075",
+  "address": "No 10 Robert Mugabe Rusape",
+  "email": "langtonmu@farmandcity.co.zw",
+  "manager": "L MUDUMA",
+  "province": "Manicaland"
+ },
+ {
+  "id": 64,
+  "branch": "RUWA",
+  "landline": "",
+  "mobile": "0785102145",
+  "address": "Shop 1 Tarisa Road Ruwa Shopping Centre PaGeorge",
+  "email": "prince.chiraswa@farmandcity.co.zw",
+  "manager": "P. CHIRASWA",
+  "province": "Mashonaland East"
+ },
+ {
+  "id": 65,
+  "branch": "SANYATI",
+  "landline": "068216235",
+  "mobile": "0773072226",
+  "address": "Stand 103 Sanyati Township Sanyati",
+  "email": "samuelny@farmandcity.co.zw",
+  "manager": "S NYAMA",
+  "province": "Mashonaland West"
+ },
+ {
+  "id": 66,
+  "branch": "ZVISHAVANE",
+  "landline": "0513481",
+  "mobile": "0772137127",
+  "address": "Shop 1 stand 3-4 Ireland Road",
+  "email": "munyaradzisa@farmandcity.co.zw",
+  "manager": "M SANDURA",
+  "province": "Midlands"
+ },
+ {
+  "id": 67,
+  "branch": "MUTAWATAWA",
+  "landline": "",
+  "mobile": "0713715249",
+  "address": "Stand 1320 Mutawatawa Township",
+  "email": "felistus.mukushi@farmandcity.co.zw",
+  "manager": "F.MUKUSHI",
+  "province": "Mashonaland East"
+ },
+ {
+  "id": 68,
+  "branch": "BIRGHNOUGH",
+  "landline": "",
+  "mobile": "0783839600",
+  "address": "Stand 225-226 Birhgnough bridge",
+  "email": "batsirai.maposa@farmandcity.co.zw",
+  "manager": "B. MAPOSA",
+  "province": "Manicaland"
+ },
+ {
+  "id": 69,
+  "branch": "CENTINARY",
+  "landline": "",
+  "mobile": "0772569525",
+  "address": "Centinary",
+  "email": "webster.pedzisai@farmandcity.co.zw",
+  "manager": "W.PEDZISAI",
+  "province": "Mashonaland Central"
+ },
+ {
+  "id": 70,
+  "branch": "DOTITO",
+  "landline": "",
+  "mobile": "0773233864",
+  "address": "Dotito Township",
+  "email": "wilbet.mupaso@farmandcity.co.zw",
+  "manager": "W.MUPASO",
+  "province": "Mashonaland Central"
+ },
+ {
+  "id": 71,
+  "branch": "GOROMONZI",
+  "landline": "",
+  "mobile": "0785671430",
+  "address": "Goromonzi",
+  "email": "munyaradzi.nyavanhu@farmandcity.co.zw",
+  "manager": "M.NYAVANHU",
+  "province": "Mashonaland East"
+ },
+ {
+  "id": 72,
+  "branch": "NYAMAROPA",
+  "landline": "",
+  "mobile": "0776413703",
+  "address": "STAND 115 NYARUWAKA SERVICE CENTRE",
+  "email": "itai.manwere@farmandcity.co.zw",
+  "manager": "I. MANWERE",
+  "province": "Manicaland"
+ },
+ {
+  "id": 73,
+  "branch": "PLUMTREE",
+  "landline": "",
+  "mobile": "0779120352",
+  "address": "STAND 75 MILL RD, PLUMTREE",
+  "email": "mandlenkosi.hadebe@farmandcity.co.zw",
+  "manager": "M.HADEBE",
+  "province": "Matabeleland South"
+ },
+ {
+  "id": 74,
+  "branch": "KWEKWE MBIZO",
+  "landline": "",
+  "mobile": "0783670437",
+  "address": "STAND 8480/11, MBIZO",
+  "email": "lincholn.mtshida@farmandcity.co.zw",
+  "manager": "L.MTSHIDA",
+  "province": "Midlands"
+ },
+ {
+  "id": 75,
+  "branch": "CHACHACHA",
+  "landline": "",
+  "mobile": "0779840599/0788899573",
+  "address": "36 DONGA SHURUGWI",
+  "email": "lowin.nhimbe@farmandcity.co.zw",
+  "manager": "L.MHIMBE",
+  "province": "Midlands"
+ },
+ {
+  "id": 76,
+  "branch": "ST MARY'S",
+  "landline": "",
+  "mobile": "0788780144",
+  "address": "STAND 3121, ST MARY'S, CHITUNGWIZA",
+  "email": "talent.mujuru@farmandcity.co.zw",
+  "manager": "T.MUJURU",
+  "province": "Harare"
+ },
+ {
+  "id": 77,
+  "branch": "JURU",
+  "landline": "",
+  "mobile": "0781969615",
+  "address": "1 CHIREMBA RD, LOT A OAKES, RUWA",
+  "email": "emmanuel.dongonda@farmandcity.co.zw",
+  "manager": "E.DONGODA",
+  "province": "Mashonaland East"
+ },
+ {
+  "id": 78,
+  "branch": "DOMBOSHAVA",
+  "landline": "",
+  "mobile": "0777248187",
+  "address": "STAND 107, SHOP 2, CHIRODZERO BUSINESS CENTRE, DOMBOSHAVA",
+  "email": "fortune.kawani@farmandcity.co.zw",
+  "manager": "F.KAWANI",
+  "province": "Mashonaland East"
+ },
+ {
+  "id": 79,
+  "branch": "SIMON MAZORODZE",
+  "landline": "",
+  "mobile": "0774342144",
+  "address": "STAND NO 40113, S.MAZORODZE R.D, SHOP NO G9 MBARE",
+  "email": "demetria.manyonga@farmandcity.co.zw",
+  "manager": "D.MANYONGA",
+  "province": "Harare"
+ },
+ {
+  "id": 80,
+  "branch": "MANRESA",
+  "landline": "",
+  "mobile": "0774887251",
+  "address": "STAND NO 1004 MANRESA, SHOP 1, HARARE",
+  "email": "pelagia.shorwa@farmandcity.co.zw",
+  "manager": "P. SHORWA",
+  "province": "Harare"
+ },
+ {
+  "id": 81,
+  "branch": "WATSOMBA",
+  "landline": "",
+  "mobile": "0717985836",
+  "address": "STAND NO 570 WATSOMBA RSC",
+  "email": "dorothy.chavanga@farmandcity.co.zw",
+  "manager": "D.CHIVANGA",
+  "province": "Manicaland"
+ },
+ {
+  "id": 82,
+  "branch": "ZVIPANI",
+  "landline": "",
+  "mobile": "0786014398",
+  "address": "ZVIPANI GROWTH POINT, ZVIPANI",
+  "email": "faith.chidemo@farmandcity.co.zw",
+  "manager": "F.CHIDEMO",
+  "province": "Mashonaland West"
+ },
+ {
+  "id": 83,
+  "branch": "NEDZIWE",
+  "landline": "",
+  "mobile": "0779266043",
+  "address": "P.O Box 8 Nhedziwa",
+  "email": "lin.mandichiya@farmandcity.co.zw",
+  "manager": "L.MANDICHIYA",
+  "province": "Manicaland"
+ },
+ {
+  "id": 84,
+  "branch": "MADZIWA",
+  "landline": "",
+  "mobile": "0778278026",
+  "address": "MADZIWA GROWTH POINT",
+  "email": "stephenji@farmandcity.co.zw",
+  "manager": "S.JIJI",
+  "province": "Mashonaland Central"
+ },
+ {
+  "id": 85,
+  "branch": "NEMBUDZIYA",
+  "landline": "",
+  "mobile": "0773987740",
+  "address": "MUTORA GRWOTHPOINT, NEMBUDZIYA",
+  "email": "siphelani.mhizha@farmandcity.co.zw",
+  "manager": "S.MHIZHA",
+  "province": "Midlands"
+ },
+ {
+  "id": 86,
+  "branch": "CHINHOYI RANK",
+  "landline": "",
+  "mobile": "0780270435",
+  "address": "STAND NO 25 CHINHOYI T/SHIP, CHINHOYI",
+  "email": "devine.jari@farmandcity.co.zw",
+  "manager": "D.JARI",
+  "province": "Mashonaland West"
+ },
+ {
+  "id": 87,
+  "branch": "RAFINGORA",
+  "landline": "",
+  "mobile": "0786506834",
+  "address": "GUMBO COMPLEX, RAFINGORA",
+  "email": "macdonald.yangairo@farmandcity.co.zw",
+  "manager": "M.YANGAIRO",
+  "province": "Mashonaland West"
+ },
+ {
+  "id": 88,
+  "branch": "RUSHINGA",
+  "landline": "",
+  "mobile": "0785420832",
+  "address": "RUSHINGA BUSINESS CENTRE, RUSHINGA",
+  "email": "marshallch@farmandcity.co.zw",
+  "manager": "M.CHINGWEREVA",
+  "province": "Mashonaland Central"
+ },
+ {
+  "id": 89,
+  "branch": "PATCHWAY",
+  "landline": "",
+  "mobile": "0781567536",
+  "address": "SHOP NO. 1 PATCHWAY KADOMA",
+  "email": "albert.matanga@farmandcity.co.zw",
+  "manager": "A. MATANGA",
+  "province": "Mashonaland West"
+ },
+ {
+  "id": 90,
+  "branch": "KADZANGARARE",
+  "landline": "",
+  "mobile": "0713271144",
+  "address": "KADZANGARARE SHOPPING CENTRE HURUNGWE",
+  "email": "adventure.chihuri@farmandcity.co.zw",
+  "manager": "A. CHIHURI",
+  "province": "Mashonaland West"
+ },
+ {
+  "id": 91,
+  "branch": "CHIVI",
+  "landline": "",
+  "mobile": "0774173126",
+  "address": "CHIVI GROWTH POINT",
+  "email": "abelch@farmandcity.co.zw",
+  "manager": "A CHIVAURA",
+  "province": "Masvingo"
+ },
+ {
+  "id": 92,
+  "branch": "CHIMANIMANI",
+  "landline": "",
+  "mobile": "0776976327",
+  "address": "Nyamapanda Complex Chimanimani",
+  "email": "immaculate.matikiti@farmandcity.co.zw",
+  "manager": "I. MATIKITI",
+  "province": "Manicaland"
+ },
+ {
+  "id": 93,
+  "branch": "NZVIMBO",
+  "landline": "",
+  "mobile": "0785676219",
+  "address": "NZVIMBO GROWTH POINT GLENDALE",
+  "email": "tadiwanashe.dirikwi@farmandcity.co.zw",
+  "manager": "T. DIRIKWI",
+  "province": "Mashonaland Central"
+ },
+ {
+  "id": 94,
+  "branch": "MAHUSEKWA",
+  "landline": "",
+  "mobile": "0784143408",
+  "address": "Mausekwa Business Centre Marondera",
+  "email": "kudzai.ruzzvidzo@farmandcity.co.zw",
+  "manager": "K. RUZVIDZO",
+  "province": "Mashonaland East"
+ },
+ {
+  "id": 95,
+  "branch": "CHECHECHE",
+  "landline": "",
+  "mobile": "0774596848",
+  "address": "244B CHECHECHE GROWTH POINT",
+  "email": "arnold.mushaikwa@farmandcity.co.zw",
+  "manager": "A. MUSHAIKWA",
+  "province": "Manicaland"
+ },
+ {
+  "id": 96,
+  "branch": "MALBEREIGN",
+  "landline": "",
+  "mobile": "0784135782",
+  "address": "Malbereign Shopping Centre Harare",
+  "email": "hildah.chiwenga@farmandcity.co.zw",
+  "manager": "H. CHIWENGA",
+  "province": "Harare"
+ }
+]

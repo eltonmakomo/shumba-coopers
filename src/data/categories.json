@@ -1,0 +1,729 @@
+[
+ {
+  "slug": "animal-health",
+  "title": "Animal Health",
+  "parent": null,
+  "intro": [
+   "Coopers Zimbabwe is one of the largest and most respected suppliers of animal health products to Zimbabwean farmers and animal producers. Our comprehensive range of products delivers consistent results. At Coopers we supply solutions, rather than just products. Our team of veterinarians are able to answer queries, advise on animal production, preventatives and cures for diseases, and where necessary, visit farms to chat one on one with farmers."
+  ],
+  "children": [
+   "beef-cattle",
+   "dairy-cattle",
+   "poultry",
+   "pigs",
+   "sheep-goats",
+   "companion-animals",
+   "fish"
+  ]
+ },
+ {
+  "slug": "beef-cattle",
+  "title": "Beef Cattle",
+  "parent": "animal-health",
+  "children": [
+   "beef-cattle-tick-control",
+   "beef-cattle-worm-and-fluke-control",
+   "beef-cattle-antibiotics",
+   "beef-cattle-wound-remedies",
+   "beef-cattle-biosecurity",
+   "fly-control",
+   "beef-cattle-nutrition",
+   "beef-cattle-vacination",
+   "beef-cattle-stud-management"
+  ]
+ },
+ {
+  "slug": "beef-cattle-tick-control",
+  "title": "Tick Control",
+  "parent": "beef-cattle",
+  "products": [
+   "avotan-pour-on",
+   "triatix",
+   "supadip",
+   "decatix",
+   "amitik-dip-pack",
+   "spoton",
+   "bimectin-plus",
+   "bimectin-injection",
+   "cooper-tick-grease",
+   "solution-r"
+  ]
+ },
+ {
+  "slug": "beef-cattle-worm-and-fluke-control",
+  "title": "Worm & Fluke Control",
+  "parent": "beef-cattle",
+  "products": [
+   "avotan-pour-on",
+   "systamex-plus-fluke",
+   "systamex",
+   "nilzan-drench",
+   "nilzan-bolus",
+   "bimectin-plus",
+   "bimectin-injection",
+   "fluxacur-nf",
+   "solution-r",
+   "panacur-bs"
+  ]
+ },
+ {
+  "slug": "beef-cattle-antibiotics",
+  "title": "Antibiotics",
+  "parent": "beef-cattle",
+  "products": [
+   "coopermycin-la",
+   "coopermycin-100",
+   "sulphadimidine",
+   "buparvex",
+   "imizol",
+   "ecotet",
+   "parvexon-plus"
+  ]
+ },
+ {
+  "slug": "beef-cattle-wound-remedies",
+  "title": "Wound Remedies",
+  "parent": "beef-cattle",
+  "products": [
+   "ex-it-wound-remedy"
+  ]
+ },
+ {
+  "slug": "beef-cattle-biosecurity",
+  "title": "Biosecurity",
+  "parent": "beef-cattle",
+  "products": [
+   "kerol-black-disinfectant"
+  ]
+ },
+ {
+  "slug": "fly-control",
+  "title": "Fly Control",
+  "parent": "beef-cattle",
+  "products": [
+   "fly-buster-bucket-and-bait",
+   "fly-buster-bait-refill",
+   "fly-zone",
+   "dyfly",
+   "d-b-m-concentrate-for-fly-control"
+  ]
+ },
+ {
+  "slug": "beef-cattle-nutrition",
+  "title": "Nutrition",
+  "parent": "beef-cattle",
+  "products": [
+   "flaveco",
+   "amino-vital",
+   "bovi-min-gel"
+  ]
+ },
+ {
+  "slug": "beef-cattle-vacination",
+  "title": "Vaccinations",
+  "parent": "beef-cattle",
+  "products": [
+   "lumpyvax",
+   "prondistar",
+   "rb-51",
+   "rotavec-corona",
+   "vibrin",
+   "nobivac-rabies-2"
+  ]
+ },
+ {
+  "slug": "beef-cattle-stud-management",
+  "title": "Stud Management",
+  "parent": "beef-cattle",
+  "products": [
+   "estrument"
+  ]
+ },
+ {
+  "slug": "dairy-cattle",
+  "title": "Dairy Cattle",
+  "parent": "animal-health",
+  "children": [
+   "dairy-cattle-tick-control",
+   "dairy-cattle-worm-and-fluke-control",
+   "dairy-cattle-antibiotics",
+   "dairy-cattle-dairy-hygiene",
+   "dairy-cattle-wound-remedies",
+   "dairy-cattle-biosecurity",
+   "dairy-fly-control",
+   "dairy-cattle-nutrition",
+   "dairy-cattle-vaccinations",
+   "dairy-cattle-stud-management"
+  ]
+ },
+ {
+  "slug": "dairy-cattle-tick-control",
+  "title": "Tick Control",
+  "parent": "dairy-cattle",
+  "products": [
+   "avotan-pour-on",
+   "triatix",
+   "supadip",
+   "decatix",
+   "amitik-dip-pack",
+   "spoton",
+   "bimectin-plus",
+   "bimectin-injection",
+   "avotan",
+   "cooper-tick-grease",
+   "solution-r"
+  ]
+ },
+ {
+  "slug": "dairy-cattle-worm-and-fluke-control",
+  "title": "Worm & Fluke Control",
+  "parent": "dairy-cattle",
+  "products": [
+   "avotan-pour-on",
+   "nilzan-drench",
+   "nilzan-bolus",
+   "avotan",
+   "systamex-plus-fluke",
+   "systamex",
+   "bimectin-plus",
+   "bimectin-injection",
+   "fluxacur-nf",
+   "solution-r",
+   "panacur-bs"
+  ]
+ },
+ {
+  "slug": "dairy-cattle-antibiotics",
+  "title": "Antibiotics",
+  "parent": "dairy-cattle",
+  "products": [
+   "coopermycin-la",
+   "coopermycin-100",
+   "sulphadimidine",
+   "buparvex",
+   "imizol",
+   "ecotet",
+   "parvexon-plus"
+  ]
+ },
+ {
+  "slug": "dairy-cattle-dairy-hygiene",
+  "title": "Dairy Hygiene",
+  "parent": "dairy-cattle",
+  "products": [
+   "estrument",
+   "golden-mastrite",
+   "milking-salve",
+   "bactergent",
+   "biodan"
+  ]
+ },
+ {
+  "slug": "dairy-cattle-wound-remedies",
+  "title": "Wound Remedies",
+  "parent": "dairy-cattle",
+  "products": [
+   "ex-it-wound-remedy"
+  ]
+ },
+ {
+  "slug": "dairy-cattle-biosecurity",
+  "title": "Biosecurity",
+  "parent": "dairy-cattle",
+  "products": [
+   "kerol-black-disinfectant"
+  ]
+ },
+ {
+  "slug": "dairy-fly-control",
+  "title": "Fly Control",
+  "parent": "dairy-cattle",
+  "products": [
+   "fly-buster-bucket-and-bait",
+   "fly-buster-bait-refill",
+   "fly-zone",
+   "dyfly",
+   "d-b-m-concentrate-for-fly-control"
+  ]
+ },
+ {
+  "slug": "dairy-cattle-nutrition",
+  "title": "Nutrition",
+  "parent": "dairy-cattle",
+  "products": [
+   "flaveco",
+   "amino-vital",
+   "bovi-min-gel"
+  ]
+ },
+ {
+  "slug": "dairy-cattle-vaccinations",
+  "title": "Vaccinations",
+  "parent": "dairy-cattle",
+  "products": [
+   "lumpyvax",
+   "prondistar",
+   "rb-51",
+   "rotavec-corona",
+   "vibrin",
+   "nobivac-rabies-2"
+  ]
+ },
+ {
+  "slug": "dairy-cattle-stud-management",
+  "title": "Stud Management",
+  "parent": "dairy-cattle",
+  "products": [
+   "estrument"
+  ]
+ },
+ {
+  "slug": "poultry",
+  "title": "Poultry",
+  "parent": "animal-health",
+  "children": [
+   "poultry-antibiotics",
+   "poultry-vaccination",
+   "poultry-nutrition",
+   "poultry-biosecurity",
+   "rodent-control"
+  ]
+ },
+ {
+  "slug": "poultry-antibiotics",
+  "title": "Antibiotics",
+  "parent": "poultry",
+  "products": [
+   "sulphadimidine",
+   "ecotet",
+   "aivlosin-soluble",
+   "aivlosin-fg50"
+  ]
+ },
+ {
+  "slug": "poultry-vaccination",
+  "title": "Vaccination",
+  "parent": "poultry",
+  "products": [
+   "nobilis-ma5-clone-30",
+   "nobilis-gumboro-d78"
+  ]
+ },
+ {
+  "slug": "poultry-nutrition",
+  "title": "Nutrition",
+  "parent": "poultry",
+  "products": [
+   "nutravit",
+   "afrivit-p",
+   "flaveco",
+   "amino-vital"
+  ]
+ },
+ {
+  "slug": "poultry-biosecurity",
+  "title": "Biosecurity",
+  "parent": "poultry",
+  "products": [
+   "pynol-disinfectant",
+   "microl-white-disinfectant",
+   "kerol-black-disinfectant",
+   "quatergent",
+   "bactergent"
+  ]
+ },
+ {
+  "slug": "rodent-control",
+  "title": "Rodent Control",
+  "parent": "poultry",
+  "products": [
+   "pulse-pellets",
+   "pulse-liquid-bait",
+   "pulse-wax-blocks"
+  ]
+ },
+ {
+  "slug": "pigs",
+  "title": "Pigs",
+  "parent": "animal-health",
+  "children": [
+   "pigs-tick-control",
+   "pigs-worm-and-fluke-control",
+   "pigs-antibiotics",
+   "pigs-wound-remedies",
+   "pigs-biosecurity",
+   "pigs-nutrition"
+  ]
+ },
+ {
+  "slug": "pigs-tick-control",
+  "title": "Tick Control",
+  "parent": "pigs",
+  "products": [
+   "triatix",
+   "cooper-tick-grease"
+  ]
+ },
+ {
+  "slug": "pigs-worm-and-fluke-control",
+  "title": "Worm & Fluke Control",
+  "parent": "pigs",
+  "products": [
+   "bimectin-injection",
+   "systamex"
+  ]
+ },
+ {
+  "slug": "pigs-antibiotics",
+  "title": "Antibiotics",
+  "parent": "pigs",
+  "products": [
+   "coopermycin-100",
+   "coopermycin-la",
+   "sulphadimidine",
+   "ecotet",
+   "aivlosin-soluble",
+   "aivlosin-fg50"
+  ]
+ },
+ {
+  "slug": "pigs-wound-remedies",
+  "title": "Wound Remedies",
+  "parent": "pigs",
+  "products": [
+   "ex-it-wound-remedy"
+  ]
+ },
+ {
+  "slug": "pigs-biosecurity",
+  "title": "Biosecurity",
+  "parent": "pigs",
+  "products": [
+   "kerol-black-disinfectant"
+  ]
+ },
+ {
+  "slug": "pigs-nutrition",
+  "title": "Nutrition",
+  "parent": "pigs",
+  "products": [
+   "flaveco",
+   "afrivit-p"
+  ]
+ },
+ {
+  "slug": "sheep-goats",
+  "title": "Sheep & Goats",
+  "parent": "animal-health",
+  "children": [
+   "sheep-and-goats-tick-and-flea-control",
+   "sheep-and-goats-worm-and-fluke-control",
+   "sheep-and-goats-antibiotics",
+   "sheep-and-goats-wound-remedies",
+   "sheep-and-goats-biosecurity",
+   "sheep-and-goats-nutrition",
+   "sheep-goats-vaccinations"
+  ]
+ },
+ {
+  "slug": "sheep-and-goats-tick-and-flea-control",
+  "title": "Tick & Flea Control",
+  "parent": "sheep-goats",
+  "products": [
+   "triatix",
+   "supadip",
+   "decatix",
+   "amitik-dip-pack",
+   "spoton",
+   "cooper-tick-grease",
+   "bimectin-plus",
+   "bimectin-injection",
+   "solution-r"
+  ]
+ },
+ {
+  "slug": "sheep-and-goats-worm-and-fluke-control",
+  "title": "Worm & Fluke Control",
+  "parent": "sheep-goats",
+  "products": [
+   "systamex",
+   "nilzan-drench",
+   "nilzan-bolus",
+   "bimectin-plus",
+   "bimectin-injection",
+   "fluxacur-nf",
+   "solution-r",
+   "panacur-bs"
+  ]
+ },
+ {
+  "slug": "sheep-and-goats-antibiotics",
+  "title": "Antibiotics",
+  "parent": "sheep-goats",
+  "products": [
+   "coopermycin-la",
+   "coopermycin-100",
+   "sulphadimidine",
+   "buparvex",
+   "imizol",
+   "ecotet"
+  ]
+ },
+ {
+  "slug": "sheep-and-goats-wound-remedies",
+  "title": "Wound Remedies",
+  "parent": "sheep-goats",
+  "products": [
+   "ex-it-wound-remedy"
+  ]
+ },
+ {
+  "slug": "sheep-and-goats-biosecurity",
+  "title": "Biosecurity",
+  "parent": "sheep-goats",
+  "products": [
+   "kerol-black-disinfectant"
+  ]
+ },
+ {
+  "slug": "sheep-and-goats-nutrition",
+  "title": "Nutrition",
+  "parent": "sheep-goats",
+  "products": [
+   "flaveco",
+   "amino-vital"
+  ]
+ },
+ {
+  "slug": "sheep-goats-vaccinations",
+  "title": "Vaccinations",
+  "parent": "sheep-goats",
+  "products": [
+   "multivax-p",
+   "prondistar",
+   "prondivax-pulpy-kidney",
+   "nobivac-rabies-2"
+  ]
+ },
+ {
+  "slug": "companion-animals",
+  "title": "Companion Animals",
+  "parent": "animal-health",
+  "children": [
+   "companion-animals-tick-and-flea-control",
+   "companion-animals-wound-remedies",
+   "companion-animals-antibiotics",
+   "companion-animals-vaccinations",
+   "companion-animals-stud-management"
+  ]
+ },
+ {
+  "slug": "companion-animals-tick-and-flea-control",
+  "title": "Tick & Flea Control",
+  "parent": "companion-animals",
+  "products": [
+   "supadip",
+   "triatix",
+   "bravecto"
+  ]
+ },
+ {
+  "slug": "companion-animals-wound-remedies",
+  "title": "Wound Remedies",
+  "parent": "companion-animals",
+  "products": [
+   "ex-it-wound-remedy"
+  ]
+ },
+ {
+  "slug": "companion-animals-antibiotics",
+  "title": "Antibiotics",
+  "parent": "companion-animals",
+  "products": [
+   "ecotet"
+  ]
+ },
+ {
+  "slug": "companion-animals-vaccinations",
+  "title": "Vaccinations",
+  "parent": "companion-animals",
+  "products": [
+   "nobivac-rabies",
+   "nobivac-rabies-2",
+   "imizol"
+  ]
+ },
+ {
+  "slug": "companion-animals-stud-management",
+  "title": "Stud Management",
+  "parent": "companion-animals",
+  "products": [
+   "estrument"
+  ]
+ },
+ {
+  "slug": "fish",
+  "title": "Fish",
+  "parent": "animal-health",
+  "products": [
+   "flaveco"
+  ]
+ },
+ {
+  "slug": "pest-control",
+  "title": "Pest Control",
+  "parent": null,
+  "intro": [
+   "Shumba Group offers an extensive range of pest control products suitable in the control of insects and rodents. While many of the products are used by commercial enterprises such as dairy, pig and chicken farms, abattoirs and butcheries, many of the products are easy to apply can also be used in households and small enterprises."
+  ],
+  "children": [
+   "crawling-insect-control",
+   "flying-insect-control",
+   "rodenticides"
+  ]
+ },
+ {
+  "slug": "crawling-insect-control",
+  "title": "Crawling Insect Control",
+  "parent": "pest-control",
+  "products": [
+   "shumba-aphid-kill",
+   "barrier-termiticide",
+   "cislin-plus",
+   "reskol",
+   "ant-poison",
+   "cockroach-poison",
+   "cislin-sc",
+   "neopybuthrin-fogging-oil",
+   "ecoterex-30ec-2",
+   "ecoterex-0-5gr-2"
+  ]
+ },
+ {
+  "slug": "flying-insect-control",
+  "title": "Flying Insect Control",
+  "parent": "pest-control",
+  "products": [
+   "cislin-plus",
+   "cislin-sc",
+   "dyfly",
+   "d-b-m-concentrate-for-fly-control",
+   "coopex-e-c-mosquito-larvicide-ec",
+   "neopybuthrin-fogging-oil",
+   "glossinex-200-sc",
+   "fly-buster-bucket-and-bait",
+   "fly-buster-bait-refill",
+   "fly-zone"
+  ]
+ },
+ {
+  "slug": "rodenticides",
+  "title": "Rodenticides",
+  "parent": "pest-control",
+  "products": [
+   "pulse-pellets",
+   "pulse-liquid-bait",
+   "pulse-wax-blocks"
+  ]
+ },
+ {
+  "slug": "crop-chemicals",
+  "title": "Crop Chemicals",
+  "parent": null,
+  "intro": [
+   "Shumba Group crop chemicals are tried and tested for efficacy in the Zimbabwean climate. They are also designed for easy application where expensive mechanical equipment is not always available or affordable. Our range of insecticides, herbicides and suckercides are suitable for both commercial and small scale use."
+  ],
+  "children": [
+   "herbicides",
+   "insecticides",
+   "suckercides",
+   "plant-nutrition-plant-nutrition"
+  ]
+ },
+ {
+  "slug": "herbicides",
+  "title": "Herbicides",
+  "parent": "crop-chemicals",
+  "products": [
+   "reflexx-120ec",
+   "torch-200sl"
+  ]
+ },
+ {
+  "slug": "insecticides",
+  "title": "Insecticides",
+  "parent": "crop-chemicals",
+  "products": [
+   "reflexx-120ec",
+   "ecoterex-30ec-2",
+   "ecoterex-0-5gr-2",
+   "halo-5cs"
+  ]
+ },
+ {
+  "slug": "suckercides",
+  "title": "Suckercides",
+  "parent": "crop-chemicals",
+  "products": [
+   "ecotopp-ec",
+   "decatopp"
+  ]
+ },
+ {
+  "slug": "plant-nutrition-plant-nutrition",
+  "title": "Plant Nutrition",
+  "parent": "crop-chemicals",
+  "products": [
+   "ezyflow-lime-sc"
+  ]
+ },
+ {
+  "slug": "disinfectants-detergents",
+  "title": "Disinfectants & Detergents",
+  "parent": null,
+  "intro": [
+   "The Shumba Group has for over 20 years been supplying environmental health products with a large basket of products for both commercial and individual use. Our detergents, disinfectants and sanitisers are part of our hygiene basket. We are able advise on best practice hygiene processes for organisations from schools and workplaces to hotels and food manufacturing premises. Our specialists are able to asses your premises, advise on the best products and cleaning methods, train your staff in hygiene and deliver the right products to you as and when you need them."
+  ],
+  "children": [
+   "disinfectants-and-detergants",
+   "sanitisers"
+  ]
+ },
+ {
+  "slug": "disinfectants-and-detergants",
+  "title": "Disinfectants & Detergents",
+  "parent": "disinfectants-detergents",
+  "products": [
+   "pynol-disinfectant",
+   "microl-white-disinfectant",
+   "kerol-black-disinfectant",
+   "quatergent",
+   "bactergent",
+   "biodan",
+   "afri-biopit",
+   "concentrated-toilet-cleaner"
+  ]
+ },
+ {
+  "slug": "sanitisers",
+  "title": "Sanitisers",
+  "parent": "disinfectants-detergents",
+  "products": [
+   "viraforce"
+  ]
+ },
+ {
+  "slug": "grain-protection",
+  "title": "Grain Protection",
+  "parent": null,
+  "intro": [
+   "The Shumba group has, since 2001 been a major supplier of grain and cereal protection products to Zimbabwean farmers, as well as to farmers in other African countries. Our Biochemists and educators travel Zimbabwe extensively offering advice on grain protection methods and application.Our knowledge base from years of working in the Zimbabwean climate with Zimbabwe farmers, and the rigorous testing of our grain protection products, means that Shumba Grain protection dust and Shumba grain protection liquid are nationally recognised, trusted brands.",
+   "Shumba Plus Dust is a grain and cereal protect ant\u2026",
+   "Controls stored grain insect pests including weevils, lesser and larger\u2026"
+  ],
+  "products": [
+   "shumba-plus-dust",
+   "shumba-supermax-ec50"
+  ]
+ }
+]
