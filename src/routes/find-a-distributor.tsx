@@ -1,8 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useMemo, useState } from "react";
-import { ChevronDown, Mail, MapPin, Navigation, Phone, Search, Store, User, X } from "lucide-react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { Check, ChevronDown, Mail, MapPin, Navigation, Phone, Search, Store, User, X } from "lucide-react";
 import { heroCattle } from "@/lib/catalog";
 import { branches, contactProvince, directionsUrl, phoneLinks, provinces, regionalManagersForProvince, searchBranches, titleCase, type Branch } from "@/lib/distributors";
+import { cn } from "@/lib/utils";
 
 type Search = { province?: string; q?: string };
 
@@ -92,21 +93,8 @@ function Finder() {
               <div className="grain-dots absolute inset-0 opacity-30" aria-hidden />
               <div className="relative">
                 <p className="text-xs font-semibold uppercase tracking-widest text-sun">Select your province</p>
-                <div className="relative mt-3">
-                  <select
-                    value={province ?? ""}
-                    onChange={(e) => setProvince(e.target.value || null)}
-                    aria-label="Select province"
-                    className="w-full appearance-none rounded-2xl border border-forest-foreground/25 bg-forest-foreground/10 px-4 py-3 pr-11 font-display text-base font-bold text-forest-foreground outline-none transition-colors hover:border-sun focus:border-sun [&>option]:bg-card [&>option]:text-card-foreground"
-                  >
-                    <option value="">All provinces ({branches.length} branches)</option>
-                    {provinces.map((p) => (
-                      <option key={p} value={p}>
-                        {p} ({branches.filter((b) => b.province === p).length} branches)
-                      </option>
-                    ))}
-                  </select>
-                  <ChevronDown className="pointer-events-none absolute right-4 top-1/2 size-5 -translate-y-1/2 text-sun" aria-hidden />
+                <div className="mt-3">
+                  <ProvinceSelect value={province} onChange={setProvince} />
                 </div>
 
                 <div className="mt-6 grid grid-cols-2 gap-3">
@@ -179,6 +167,88 @@ function Finder() {
         </div>
       </div>
     </>
+  );
+}
+
+type ProvinceOption = { value: string | null; label: string; count: number };
+
+function ProvinceSelect({ value, onChange }: { value: string | null; onChange: (p: string | null) => void }) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const onPointer = (e: PointerEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("pointerdown", onPointer);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("pointerdown", onPointer);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
+
+  const options: ProvinceOption[] = useMemo(
+    () => [
+      { value: null, label: "All provinces", count: branches.length },
+      ...provinces.map((p) => ({ value: p, label: p, count: branches.filter((b) => b.province === p).length })),
+    ],
+    [],
+  );
+  const current = options.find((o) => o.value === value) ?? options[0]!;
+
+  return (
+    <div ref={ref} className="relative">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-haspopup="listbox"
+        aria-expanded={open}
+        className="flex w-full items-center justify-between gap-3 rounded-2xl border border-forest-foreground/25 bg-forest-foreground/10 px-4 py-3 text-left transition-colors hover:border-sun focus-visible:border-sun focus-visible:outline-none"
+      >
+        <span className="min-w-0">
+          <span className="block truncate font-display text-base font-bold text-forest-foreground">{current.label}</span>
+          <span className="block text-xs text-forest-foreground/70">{current.count} branches</span>
+        </span>
+        <ChevronDown className={cn("size-5 shrink-0 text-sun transition-transform duration-200", open && "rotate-180")} aria-hidden />
+      </button>
+      {open && (
+        <ul role="listbox" aria-label="Province" className="absolute z-30 mt-2 max-h-80 w-full overflow-y-auto rounded-2xl border bg-card p-1.5 shadow-lift">
+          {options.map((o) => {
+            const active = o.value === value;
+            return (
+              <li key={o.label}>
+                <button
+                  type="button"
+                  role="option"
+                  aria-selected={active}
+                  onClick={() => {
+                    onChange(o.value);
+                    setOpen(false);
+                  }}
+                  className={cn(
+                    "flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2.5 text-left text-sm transition-colors",
+                    active ? "bg-primary font-semibold text-primary-foreground" : "text-foreground hover:bg-muted",
+                  )}
+                >
+                  <span className="flex min-w-0 items-center gap-2">
+                    {active && <Check className="size-4 shrink-0" aria-hidden />}
+                    <span className="truncate">{o.label}</span>
+                  </span>
+                  <span className={cn("shrink-0 text-xs tabular-nums", active ? "text-primary-foreground/80" : "text-muted-foreground")}>
+                    {o.count} {o.count === 1 ? "branch" : "branches"}
+                  </span>
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+      )}
+    </div>
   );
 }
 
