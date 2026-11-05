@@ -12,6 +12,14 @@ describe("distributor data", () => {
     expect(provinces).toContain("Manicaland");
   });
 
+  it("finds Harare stores nationwide without including them in Mashonaland Central", () => {
+    expect(searchBranches(branches, "harare", "Mashonaland Central")).toEqual([]);
+    const results = searchBranches(branches, "harare", null);
+    expect(results.length).toBeGreaterThan(0);
+    expect(results.some((branch) => branch.province === "Harare")).toBe(true);
+    expect(searchBranches(branches, "  HARARE  ", null)).toEqual(results);
+  });
+
   it("splits combined mobile numbers into dialable links", () => {
     expect(phoneLinks("0771166684/0779476442").map((p) => p.href)).toEqual(["tel:+263771166684", "tel:+263779476442"]);
   });

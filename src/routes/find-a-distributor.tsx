@@ -4,6 +4,7 @@ import { Check, ChevronDown, Mail, MapPin, Navigation, Phone, Search, Store, Use
 import { heroCattle } from "@/lib/catalog";
 import { branches, contactProvince, directionsUrl, phoneLinks, provinces, regionalManagersForProvince, searchBranches, titleCase, type Branch } from "@/lib/distributors";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 
 type Search = { province?: string; q?: string };
 
@@ -30,9 +31,19 @@ export const Route = createFileRoute("/find-a-distributor")({
 });
 
 function Finder() {
-  const { province = null, q: initialQ = "" } = Route.useSearch();
+  const { province = null, q = "" } = Route.useSearch();
   const navigate = Route.useNavigate();
-  const [q, setQ] = useState(initialQ);
+  const setQ = (value: string) =>
+    navigate({
+      search: (prev) => {
+        const next: Search = {};
+        if (prev.province) next.province = prev.province;
+        if (value) next.q = value;
+        return next;
+      },
+      replace: true,
+      resetScroll: false,
+    });
 
   const setProvince = (p: string | null) =>
     navigate({
@@ -47,6 +58,7 @@ function Finder() {
     });
 
   const results = useMemo(() => searchBranches(branches, q, province), [q, province]);
+  const nationwideResults = useMemo(() => searchBranches(branches, q, null), [q]);
   const inProvince = province ? branches.filter((b) => b.province === province) : branches;
   const managers = new Set(inProvince.map((b) => b.manager)).size;
   const salesProvince = contactProvince(province, q, results);
@@ -79,11 +91,21 @@ function Finder() {
               aria-label="Search distributors"
             />
             {q && (
-              <button onClick={() => setQ("")} aria-label="Clear search" className="rounded-full p-1 hover:bg-muted">
+              <Button variant="ghost" size="icon" onClick={() => setQ("")} aria-label="Clear search" className="shrink-0 rounded-full">
                 <X className="size-4" />
-              </button>
+              </Button>
             )}
           </label>
+          <div className="mt-3 flex flex-wrap items-center justify-between gap-2 px-2 text-sm" aria-live="polite">
+            <a href="#distributor-results" className="font-semibold text-foreground underline underline-offset-4">
+              {results.length} {results.length === 1 ? "store" : "stores"} {province ? `in ${province}` : "across all provinces"}
+            </a>
+            {province && (
+              <Button variant="link" onClick={() => setProvince(null)} className="h-auto whitespace-normal px-0 py-1 text-left">
+                Search all provinces{q.trim() && nationwideResults.length > results.length ? ` (${nationwideResults.length} stores)` : ""}
+              </Button>
+            )}
+          </div>
         </div>
 
         <div className="mt-8 grid gap-6 lg:grid-cols-[340px_minmax(0,1fr)]">
@@ -139,7 +161,7 @@ function Finder() {
           </aside>
 
           {/* Results */}
-          <section aria-live="polite">
+          <section id="distributor-results" className="scroll-mt-24" aria-live="polite">
             <div className="mb-4 flex items-baseline justify-between gap-3">
               <p className="text-sm text-muted-foreground">
                 Showing <span className="font-semibold text-foreground">{results.length}</span> {results.length === 1 ? "store" : "stores"}
@@ -151,10 +173,20 @@ function Finder() {
               <div className="rounded-3xl border border-dashed bg-card p-12 text-center">
                 <Store className="mx-auto size-10 text-muted-foreground" />
                 <p className="mt-4 font-display text-xl font-bold">No stores found</p>
-                <p className="mt-1 text-muted-foreground">Try another town or clear the province filter.</p>
-                <button onClick={() => { setQ(""); setProvince(null); }} className="mt-5 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground">
-                  Reset filters
-                </button>
+                <p className="mt-1 text-muted-foreground">
+                  {province && nationwideResults.length > 0
+                    ? `${nationwideResults.length} matching stores are in other provinces.`
+                    : "No branches match this search."}
+                </p>
+                <Button onClick={() => {
+                  if (province && nationwideResults.length > 0) {
+                    setProvince(null);
+                  } else {
+                    navigate({ search: {}, replace: true, resetScroll: false });
+                  }
+                }} className="mt-5 rounded-full">
+                  {province && nationwideResults.length > 0 ? "Search all provinces" : "Reset filters"}
+                </Button>
               </div>
             ) : (
               <div className="grid gap-4 md:grid-cols-2">
@@ -199,7 +231,7 @@ function ProvinceSelect({ value, onChange }: { value: string | null; onChange: (
     ],
     [],
   );
-  const current = options.find((o) => o.value === value) ?? options[0]!;
+  const current = options.find((o) => o.value === value) ?? { value: null, label: "All provinces", count: branches.length };
 
   return (
     <div ref={ref} className="relative">
