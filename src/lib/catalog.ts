@@ -6,6 +6,11 @@ import cropsImg from "@/assets/crops.jpg";
 import grainImg from "@/assets/grain.jpg";
 import hygieneImg from "@/assets/hygiene.jpg";
 import vetImg from "@/assets/vet.jpg";
+import dairyCattleImg from "@/assets/dairy-cattle.jpg";
+import pigsImg from "@/assets/pigs.jpg";
+import sheepGoatsImg from "@/assets/sheep-goats.jpg";
+import companionAnimalsImg from "@/assets/companion-animals.jpg";
+import fishImg from "@/assets/fish.jpg";
 
 export type Product = {
   slug: string;
@@ -72,8 +77,12 @@ export function countProducts(node: CategoryNode): number {
 const sectionImages: Record<string, string> = {
   "animal-health": vetImg,
   "beef-cattle": heroCattle,
-  "dairy-cattle": vetImg,
+  "dairy-cattle": dairyCattleImg,
   poultry: poultryImg,
+  pigs: pigsImg,
+  "sheep-goats": sheepGoatsImg,
+  "companion-animals": companionAnimalsImg,
+  fish: fishImg,
   "pest-control": hygieneImg,
   "crop-chemicals": cropsImg,
   "disinfectants-detergents": hygieneImg,
