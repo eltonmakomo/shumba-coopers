@@ -1,5 +1,6 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { ArrowRight, MapPin, Search, Stethoscope } from "lucide-react";
+import { useState } from "react";
 import { CategoryCard } from "@/components/site/Cards";
 import { getCategory, getChildren, heroCattle, poultryImg, topSections, vetImg } from "@/lib/catalog";
 import { aboutCoopers, aboutShumba } from "@/lib/company";
@@ -24,6 +25,13 @@ function Index() {
   const animal = getCategory("animal-health")!;
   const species = getChildren(animal);
   const others = topSections.filter((s) => s.slug !== "animal-health");
+  const navigate = useNavigate();
+  const [query, setQuery] = useState("");
+
+  const submitSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    navigate({ to: "/find-a-distributor", search: query.trim() ? { q: query.trim() } : {} });
+  };
 
   return (
     <>
@@ -54,6 +62,17 @@ function Index() {
           <div className="glass relative rounded-3xl p-6 text-foreground shadow-lift animate-float-slow">
             <p className="text-xs font-semibold uppercase tracking-widest text-primary">Find your distributor</p>
             <p className="mt-2 font-display text-2xl font-bold">{branches.length} stores across {provinces.length} provinces</p>
+            <form onSubmit={submitSearch} className="mt-5 flex items-center gap-2 rounded-2xl bg-muted px-4 py-1.5 focus-within:ring-2 focus-within:ring-primary/40">
+              <Search className="size-4 shrink-0 text-muted-foreground" />
+              <input
+                type="search"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="Search by town, store or province…"
+                aria-label="Search distributors by town, store or province"
+                className="w-full bg-transparent py-2 text-sm outline-none placeholder:text-muted-foreground"
+              />
+            </form>
             <div className="mt-5 flex flex-wrap gap-2">
               {provinces.map((p) => (
                 <Link key={p} to="/find-a-distributor" search={{ province: p }} className="rounded-full border bg-card px-3 py-1.5 text-xs font-medium transition-colors hover:border-primary hover:text-primary">
@@ -61,8 +80,8 @@ function Index() {
                 </Link>
               ))}
             </div>
-            <Link to="/find-a-distributor" className="mt-5 flex items-center gap-3 rounded-2xl bg-muted px-4 py-3 text-sm text-muted-foreground hover:text-foreground">
-              <Search className="size-4" /> Search by town, store or province…
+            <Link to="/find-a-distributor" className="mt-5 flex items-center justify-center gap-2 rounded-2xl bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5">
+              <MapPin className="size-4" /> Open the Distributor Finder
             </Link>
           </div>
         </div>
