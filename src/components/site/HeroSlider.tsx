@@ -43,22 +43,20 @@ export function HeroSlider({ aside }: { aside: ReactNode }) {
           className={`absolute inset-0 -z-20 size-full object-cover object-[35%_center] transition-opacity duration-1000 ${n === i ? "opacity-100" : "opacity-0"}`}
         />
       ))}
-      <div className="absolute inset-0 -z-10 bg-forest/25" aria-hidden />
+      <div className="bg-hero-overlay absolute inset-0 -z-10" aria-hidden />
 
-      <div className="mx-auto grid min-h-[640px] max-w-7xl items-end gap-8 px-4 pb-20 pt-16 sm:px-6 lg:h-[min(82vh,720px)] lg:grid-cols-[1.1fr_1fr] lg:items-end">
-        <div className="relative min-h-72">
+      <div className="mx-auto grid min-h-[640px] max-w-7xl items-end gap-8 px-4 pb-20 pt-16 sm:px-6 lg:h-[min(82vh,720px)] lg:grid-cols-[1.1fr_1fr] lg:items-center">
+        <div className="relative min-h-80 self-stretch">
           {slides.map((s, n) => (
             <div
               key={s.strong}
               aria-hidden={n !== i}
-              className={`absolute inset-x-0 bottom-0 rounded-3xl p-7 shadow-lift backdrop-blur-sm transition-all duration-700 md:p-10 ${
-                s.tone === "red" ? "bg-primary/85 text-primary-foreground" : "bg-sun/85 text-sun-foreground"
-              } ${n === i ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-4 opacity-0"}`}
+              className={`absolute inset-x-0 top-1/2 -translate-y-1/2 transition-all duration-700 ${n === i ? "opacity-100" : "pointer-events-none opacity-0"}`}
             >
-              {s.lead && <p className="font-display text-2xl font-light uppercase md:text-3xl">{s.lead}</p>}
-              <h2 className="font-display text-4xl font-extrabold uppercase leading-[1] md:text-6xl">{s.strong}</h2>
-              {s.tail && <p className="font-display text-2xl font-light uppercase md:text-3xl">{s.tail}</p>}
-              <p className="mt-4 max-w-md text-lg opacity-90">{s.sub}</p>
+              {s.lead && <p className="font-display text-2xl font-bold md:text-4xl">{s.lead}</p>}
+              <h2 className="text-5xl font-extrabold leading-[0.98] text-sun md:text-7xl">{s.strong}</h2>
+              {s.tail && <p className="font-display text-2xl font-bold md:text-4xl">{s.tail}</p>}
+              <p className="mt-6 max-w-xl text-lg text-forest-foreground/85">{s.sub}</p>
             </div>
           ))}
         </div>
