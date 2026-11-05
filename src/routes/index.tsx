@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, MapPin, Stethoscope } from "lucide-react";
 import { CategoryCard } from "@/components/site/Cards";
-import { getCategory, getChildren, heroCattle, poultryImg, topSections, vetImg } from "@/lib/catalog";
+import { getCategory, getChildren, heroCattleTall, poultryImg, topSections, vetImg } from "@/lib/catalog";
 import { aboutCoopers, aboutShumba } from "@/lib/company";
 import { branches, provinces } from "@/lib/distributors";
 import trustedLogo from "@/assets/logo-coopers-shumba.png";
@@ -29,7 +29,7 @@ function Index() {
     <>
       {/* Hero */}
       <section className="relative isolate overflow-hidden bg-forest text-forest-foreground">
-        <img src={heroCattle} alt="Cattle grazing on Zimbabwean grassland at sunset" className="absolute inset-0 -z-20 size-full object-cover" width={1280} height={960} />
+        <img src={heroCattleTall} alt="Cattle grazing on Zimbabwean grassland at sunset" className="absolute inset-0 -z-20 size-full object-cover" width={1280} height={960} />
         <div className="bg-hero-overlay absolute inset-0 -z-10" aria-hidden />
         <div className="mx-auto grid min-h-[86vh] max-w-7xl items-end gap-10 px-4 pb-14 pt-24 sm:px-6 lg:grid-cols-[1.3fr_1fr] lg:items-center">
           <div className="animate-rise">

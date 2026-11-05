@@ -2,7 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { MapPin } from "lucide-react";
 import { CategoryCard, ProductCard } from "@/components/site/Cards";
 import { PageHero, type Crumb } from "@/components/site/PageHero";
-import { getCategory, getChildren, getProductsFor, getTrail, imageFor } from "@/lib/catalog";
+import { bannerFor, getCategory, getChildren, getProductsFor, getTrail } from "@/lib/catalog";
 
 export const Route = createFileRoute("/category/$slug")({
   loader: ({ params }) => {
@@ -47,7 +47,7 @@ function CategoryPage() {
 
   return (
     <>
-      <PageHero title={parent && parent.parent ? `${parent.title} · ${node.title}` : node.title} image={imageFor(node, false)} crumbs={crumbs}>
+      <PageHero title={parent && parent.parent ? `${parent.title} · ${node.title}` : node.title} image={bannerFor(node)} crumbs={crumbs}>
         {node.intro?.map((p) => (
           <p key={p} className="mb-3">{p}</p>
         ))}

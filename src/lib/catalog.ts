@@ -1,6 +1,7 @@
 import categoriesData from "@/data/categories.json";
 import productsData from "@/data/products.json";
 import heroCattle from "@/assets/hero-cattle.jpg";
+import heroCattleTall from "@/assets/hero-cattle-tall.jpg";
 import poultryImg from "@/assets/poultry.jpg";
 import cropsImg from "@/assets/crops.jpg";
 import grainImg from "@/assets/grain.jpg";
@@ -11,6 +12,11 @@ import pigsImg from "@/assets/pigs.jpg";
 import sheepGoatsImg from "@/assets/sheep-goats.jpg";
 import companionAnimalsImg from "@/assets/companion-animals.jpg";
 import fishImg from "@/assets/fish.jpg";
+import poultryWideImg from "@/assets/poultry-wide.jpg";
+import pigsWideImg from "@/assets/pigs-wide.jpg";
+import sheepGoatsWideImg from "@/assets/sheep-goats-wide.jpg";
+import companionAnimalsWideImg from "@/assets/companion-animals-wide.jpg";
+import fishWideImg from "@/assets/fish-wide.jpg";
 
 export type Product = {
   slug: string;
@@ -76,7 +82,7 @@ export function countProducts(node: CategoryNode): number {
 
 const sectionImages: Record<string, string> = {
   "animal-health": vetImg,
-  "beef-cattle": heroCattle,
+  "beef-cattle": heroCattleTall,
   "dairy-cattle": dairyCattleImg,
   poultry: poultryImg,
   pigs: pigsImg,
@@ -98,6 +104,32 @@ export function imageFor(node: CategoryNode, allowProduct = true): string {
   return node.parent ? imageFor(getCategory(node.parent)!, false) : heroCattle;
 }
 
+/**
+ * Wide banner variant for the PageHero strip. Banners crop a 4:3 image to a
+ * narrow horizontal band, so animal photos need a wide, vertically centered
+ * composition; falls back to the card image otherwise.
+ */
+const bannerImages: Record<string, string> = {
+  "beef-cattle": heroCattle,
+  "dairy-cattle": dairyCattleImg,
+  poultry: poultryWideImg,
+  pigs: pigsWideImg,
+  "sheep-goats": sheepGoatsWideImg,
+  "companion-animals": companionAnimalsWideImg,
+  fish: fishWideImg,
+};
+
+export function bannerFor(node: CategoryNode): string {
+  const own = bannerImages[node.slug];
+  if (own) return own;
+  if (node.parent) {
+    const parent = getCategory(node.parent);
+    const parentBanner = parent ? bannerImages[parent.slug] : undefined;
+    if (parentBanner) return parentBanner;
+  }
+  return imageFor(node, false);
+}
+
 /** Plain-text excerpt from the product's first description paragraph. */
 export function excerpt(p: Product, max = 120): string {
   const m = p.html.match(/<p>(.*?)<\/p>/);
@@ -105,4 +137,4 @@ export function excerpt(p: Product, max = 120): string {
   return text.length > max ? text.slice(0, max).trimEnd() + "…" : text;
 }
 
-export { heroCattle, poultryImg, cropsImg, grainImg, hygieneImg, vetImg };
+export { heroCattle, heroCattleTall, poultryImg, cropsImg, grainImg, hygieneImg, vetImg };
