@@ -17,19 +17,16 @@ const slides: Slide[] = [
 
 export function HeroSlider({ aside }: { aside: ReactNode }) {
   const [i, setI] = useState(0);
-  const [paused, setPaused] = useState(false);
+  // Auto-advance every 5s; restarts the timer after a manual pick.
   useEffect(() => {
-    if (paused) return;
-    const t = setInterval(() => setI((n) => (n + 1) % slides.length), 6000);
-    return () => clearInterval(t);
-  }, [paused]);
+    const t = setTimeout(() => setI((n) => (n + 1) % slides.length), 5000);
+    return () => clearTimeout(t);
+  }, [i]);
   const go = (d: number) => setI((n) => (n + d + slides.length) % slides.length);
 
   return (
     <section
       className="relative isolate overflow-hidden bg-forest text-forest-foreground"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
       aria-roledescription="carousel"
     >
       {slides.map((s, n) => (
