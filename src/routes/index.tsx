@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, MapPin, Stethoscope } from "lucide-react";
 import { CategoryCard } from "@/components/site/Cards";
-import { getCategory, getChildren, heroCattleTall, poultryImg, topSections, vetImg } from "@/lib/catalog";
+import { HeroSlider } from "@/components/site/HeroSlider";
+import { getCategory, getChildren, poultryImg, topSections, vetImg } from "@/lib/catalog";
 import { aboutCoopers, aboutShumba } from "@/lib/company";
 import { branches, provinces } from "@/lib/distributors";
 import trustedLogo from "@/assets/logo-coopers-shumba.png";
@@ -27,27 +28,9 @@ function Index() {
 
   return (
     <>
-      {/* Hero */}
-      <section className="relative isolate overflow-hidden bg-forest text-forest-foreground">
-        <img src={heroCattleTall} alt="Cattle grazing on Zimbabwean grassland at sunset" className="absolute inset-0 -z-20 size-full object-cover" width={1280} height={960} />
-        <div className="bg-hero-overlay absolute inset-0 -z-10" aria-hidden />
-        <div className="mx-auto grid min-h-[86vh] max-w-7xl items-end gap-10 px-4 pb-14 pt-24 sm:px-6 lg:grid-cols-[1.3fr_1fr] lg:items-center">
-          <div className="animate-rise">
-            <span className="inline-flex items-center gap-2 rounded-full glass-dark px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-sun">
-              Coopers · Shumba Group
-            </span>
-            <h1 className="mt-6 text-5xl font-extrabold leading-[0.98] md:text-7xl">
-              Promoting <span className="text-sun">healthy livestock</span>
-            </h1>
-            <p className="mt-6 max-w-xl text-lg text-forest-foreground/85">for Zimbabwean farmers since 1913</p>
-            <div className="mt-9 flex flex-wrap gap-3">
-              <Link to="/products" className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 font-semibold text-primary-foreground shadow-glow transition-transform hover:-translate-y-0.5">
-                Explore Products <ArrowRight className="size-4" />
-              </Link>
-            </div>
-          </div>
-
-          {/* Floating finder teaser */}
+      <h1 className="sr-only">Shumba Coopers — Promoting healthy livestock</h1>
+      <HeroSlider
+        aside={
           <div className="glass relative rounded-3xl p-6 text-foreground shadow-lift animate-float-slow">
             <p className="text-xs font-semibold uppercase tracking-widest text-primary">Find your distributor</p>
             <p className="mt-2 font-display text-2xl font-bold">{branches.length} stores across {provinces.length} provinces</p>
@@ -62,8 +45,8 @@ function Index() {
               ))}
             </div>
           </div>
-        </div>
-      </section>
+        }
+      />
 
       {/* Animal Health */}
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-28">
