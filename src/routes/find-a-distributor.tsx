@@ -1,9 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import { Mail, MapPin, Navigation, Phone, Search, Store, User, X } from "lucide-react";
+import { ChevronDown, Mail, MapPin, Navigation, Phone, Search, Store, User, X } from "lucide-react";
 import { heroCattle } from "@/lib/catalog";
-import { branches, contactProvince, directionsUrl, phoneLinks, provinces, regionalManagers, regionalManagersForProvince, searchBranches, titleCase, type Branch } from "@/lib/distributors";
-import { cn } from "@/lib/utils";
+import { branches, contactProvince, directionsUrl, phoneLinks, provinces, regionalManagersForProvince, searchBranches, titleCase, type Branch } from "@/lib/distributors";
 
 type Search = { province?: string; q?: string };
 
@@ -50,7 +49,7 @@ function Finder() {
   const inProvince = province ? branches.filter((b) => b.province === province) : branches;
   const managers = new Set(inProvince.map((b) => b.manager)).size;
   const salesProvince = contactProvince(province, q, results);
-  const salesContacts = salesProvince ? regionalManagersForProvince(salesProvince) : regionalManagers;
+  const salesContacts = salesProvince ? regionalManagersForProvince(salesProvince) : [];
 
   return (
     <>
@@ -84,12 +83,6 @@ function Finder() {
               </button>
             )}
           </label>
-          <div className="-mx-1 mt-4 flex gap-2 overflow-x-auto px-1 pb-1" role="tablist" aria-label="Province">
-            <ProvinceChip active={!province} onClick={() => setProvince(null)} label="All provinces" count={branches.length} />
-            {provinces.map((p) => (
-              <ProvinceChip key={p} active={province === p} onClick={() => setProvince(p)} label={p} count={branches.filter((b) => b.province === p).length} />
-            ))}
-          </div>
         </div>
 
         <div className="mt-8 grid gap-6 lg:grid-cols-[340px_minmax(0,1fr)]">
@@ -98,8 +91,24 @@ function Finder() {
             <div className="bg-forest-gradient relative overflow-hidden rounded-3xl p-7 text-forest-foreground shadow-lift">
               <div className="grain-dots absolute inset-0 opacity-30" aria-hidden />
               <div className="relative">
-                <p className="text-xs font-semibold uppercase tracking-widest text-sun">{province ? "Province" : "Zimbabwe"}</p>
-                <h2 className="mt-2 text-3xl font-extrabold">{province ?? "All provinces"}</h2>
+                <p className="text-xs font-semibold uppercase tracking-widest text-sun">Select your province</p>
+                <div className="relative mt-3">
+                  <select
+                    value={province ?? ""}
+                    onChange={(e) => setProvince(e.target.value || null)}
+                    aria-label="Select province"
+                    className="w-full appearance-none rounded-2xl border border-forest-foreground/25 bg-forest-foreground/10 px-4 py-3 pr-11 font-display text-base font-bold text-forest-foreground outline-none transition-colors hover:border-sun focus:border-sun [&>option]:bg-card [&>option]:text-card-foreground"
+                  >
+                    <option value="">All provinces ({branches.length} branches)</option>
+                    {provinces.map((p) => (
+                      <option key={p} value={p}>
+                        {p} ({branches.filter((b) => b.province === p).length} branches)
+                      </option>
+                    ))}
+                  </select>
+                  <ChevronDown className="pointer-events-none absolute right-4 top-1/2 size-5 -translate-y-1/2 text-sun" aria-hidden />
+                </div>
+
                 <div className="mt-6 grid grid-cols-2 gap-3">
                   <div className="glass-dark rounded-2xl p-4">
                     <p className="font-display text-3xl font-extrabold text-sun">{inProvince.length}</p>
@@ -111,25 +120,32 @@ function Finder() {
                   </div>
                 </div>
 
-                <p className="mt-7 text-xs font-semibold uppercase tracking-widest text-sun">Regional sales rep</p>
-                {salesProvince && province && <p className="mt-2 text-sm text-forest-foreground/75">Covering {salesProvince}</p>}
-                <div className="mt-3 space-y-3">
-                  {salesContacts.map((manager) => (
-                    <div key={manager.region} className="border-t border-forest-foreground/20 pt-4 text-sm">
-                      {!province && <p className="text-xs text-forest-foreground/75">{manager.region}</p>}
-                      <p className="mt-1 font-display text-lg font-bold">{manager.name}</p>
-                      <a href={phoneLinks(manager.phone)[0]?.href ?? undefined} className="mt-3 flex items-center gap-2 hover:text-sun">
-                        <Phone className="size-4 shrink-0" /> {manager.phone}
-                      </a>
-                      <a href={`mailto:${manager.email}`} className="mt-2 flex items-start gap-2 hover:text-sun">
-                        <Mail className="mt-0.5 size-4 shrink-0" /> <span className="min-w-0 break-all">{manager.email}</span>
-                      </a>
+                {salesProvince ? (
+                  <>
+                    <p className="mt-7 text-xs font-semibold uppercase tracking-widest text-sun">Regional sales rep</p>
+                    <p className="mt-2 text-sm text-forest-foreground/75">Covering {salesProvince}</p>
+                    <div className="mt-3 space-y-3">
+                      {salesContacts.map((manager) => (
+                        <div key={manager.region} className="border-t border-forest-foreground/20 pt-4 text-sm">
+                          <p className="mt-1 font-display text-lg font-bold">{manager.name}</p>
+                          <a href={phoneLinks(manager.phone)[0]?.href ?? undefined} className="mt-3 flex items-center gap-2 hover:text-sun">
+                            <Phone className="size-4 shrink-0" /> {manager.phone}
+                          </a>
+                          <a href={`mailto:${manager.email}`} className="mt-2 flex items-start gap-2 hover:text-sun">
+                            <Mail className="mt-0.5 size-4 shrink-0" /> <span className="min-w-0 break-all">{manager.email}</span>
+                          </a>
+                        </div>
+                      ))}
+                      {salesContacts.length === 0 && (
+                        <p className="text-sm text-forest-foreground/75">Regional manager assignment not yet confirmed for {salesProvince}.</p>
+                      )}
                     </div>
-                  ))}
-                  {salesContacts.length === 0 && (
-                    <p className="text-sm text-forest-foreground/75">Regional manager assignment not yet confirmed for {salesProvince}.</p>
-                  )}
-                </div>
+                  </>
+                ) : (
+                  <p className="mt-7 text-sm text-forest-foreground/75">
+                    Choose a province above to see the sales rep for that region.
+                  </p>
+                )}
               </div>
             </div>
           </aside>
@@ -163,23 +179,6 @@ function Finder() {
         </div>
       </div>
     </>
-  );
-}
-
-function ProvinceChip({ active, onClick, label, count }: { active: boolean; onClick: () => void; label: string; count: number }) {
-  return (
-    <button
-      role="tab"
-      aria-selected={active}
-      onClick={onClick}
-      className={cn(
-        "inline-flex shrink-0 items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-all",
-        active ? "border-primary bg-primary text-primary-foreground shadow-glow" : "bg-card hover:border-primary hover:text-primary",
-      )}
-    >
-      {label}
-      <span className={cn("rounded-full px-2 py-0.5 text-xs", active ? "bg-primary-foreground/20" : "bg-muted")}>{count}</span>
-    </button>
   );
 }
 
