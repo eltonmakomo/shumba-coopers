@@ -17,9 +17,12 @@ export function regionalManagersForProvince(province: string): RegionalManager[]
 
 export function contactProvince(province: string | null, query: string, results: Branch[]): string | null {
   if (province) return province;
-  if (!query.trim() || results.length === 0) return null;
-  const q = query.trim().toLowerCase();
-  const townMatches = results.filter((branch) => branch.branch.toLowerCase().includes(q));
+  const words = query.trim().toLowerCase().split(/\s+/).filter(Boolean);
+  if (!words.length || results.length === 0) return null;
+  const townMatches = results.filter((branch) => {
+    const name = branch.branch.toLowerCase().replace(/[^a-z0-9]+/g, " ");
+    return words.every((word) => name.includes(word));
+  });
   const areaResults = townMatches.length > 0 ? townMatches : results;
   const matchedProvinces = new Set(areaResults.map((branch) => branch.province));
   return matchedProvinces.size === 1 ? areaResults[0]?.province ?? null : null;
@@ -77,10 +80,19 @@ export function directionsUrl(b: Branch): string {
 }
 
 export function searchBranches(list: Branch[], query: string, province: string | null): Branch[] {
-  const q = query.trim().toLowerCase();
+  // Word-level match: every word in the query must appear somewhere in the
+  // store's details, in any order ("10th bulawayo" finds "BULAWAYO 10TH").
+  const words = query.trim().toLowerCase().split(/\s+/).filter(Boolean);
   return list.filter((b) => {
     if (province && b.province !== province) return false;
-    if (!q) return true;
-    return [b.branch, b.address, b.manager, b.province, b.email].some((f) => f.toLowerCase().includes(q));
+    if (!words.length) return true;
+    // Punctuation is noise for matching; keep only letters and digits so
+    // "jmoyo" finds "J Moyo Avenue" and "0772137" finds a phone number.
+    const haystack = [b.branch, b.address, b.manager, b.province, b.email, b.mobile, b.landline]
+      .join(" ")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, " ");
+    const compact = haystack.replace(/\s+/g, "");
+    return words.every((word) => haystack.includes(word) || compact.includes(word.replace(/[^a-z0-9]/g, "")));
   });
 }

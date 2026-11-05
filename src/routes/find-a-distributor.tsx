@@ -86,7 +86,7 @@ function Finder() {
             <input
               value={q}
               onChange={(e) => setQ(e.target.value)}
-              placeholder="Search by town, branch, address or manager…"
+              placeholder="Search by town, branch, address, manager or phone…"
               className="w-full bg-transparent outline-none placeholder:text-muted-foreground"
               aria-label="Search distributors"
             />

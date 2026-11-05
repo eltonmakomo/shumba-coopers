@@ -20,6 +20,27 @@ describe("distributor data", () => {
     expect(searchBranches(branches, "  HARARE  ", null)).toEqual(results);
   });
 
+  it("matches every word of a search anywhere in a store's details, in any order", () => {
+    const reversed = searchBranches(branches, "10th bulawayo", null);
+    expect(reversed.map((b) => b.branch)).toContain("BULAWAYO 10TH");
+    const byStreet = searchBranches(branches, "fife", null);
+    expect(byStreet.map((b) => b.branch)).toContain("BULAWAYO FIFE STREET");
+    const byManager = searchBranches(branches, "sibanda", null);
+    expect(byManager.length).toBeGreaterThan(0);
+    expect(byManager.every((b) => b.manager.toLowerCase().includes("sibanda"))).toBe(true);
+  });
+
+  it("finds stores by phone number digits", () => {
+    const target = branches.find((b) => b.mobile === "0772137188");
+    expect(target).toBeTruthy();
+    expect(searchBranches(branches, "0772137188", null).map((b) => b.id)).toContain(target!.id);
+    expect(searchBranches(branches, "0772137", null).length).toBeGreaterThan(0);
+  });
+
+  it("still requires every word to match", () => {
+    expect(searchBranches(branches, "bulawayo harare", null)).toEqual([]);
+  });
+
   it("splits combined mobile numbers into dialable links", () => {
     expect(phoneLinks("0771166684/0779476442").map((p) => p.href)).toEqual(["tel:+263771166684", "tel:+263779476442"]);
   });
