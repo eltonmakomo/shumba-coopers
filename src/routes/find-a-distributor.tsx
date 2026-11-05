@@ -94,7 +94,7 @@ function Finder() {
 
         <div className="mt-8 grid gap-6 lg:grid-cols-[340px_minmax(0,1fr)]">
           {/* Side panel */}
-          <aside className="lg:sticky lg:top-24 lg:self-start">
+          <aside className="lg:sticky lg:top-24 lg:max-h-[calc(100vh-7rem)] lg:self-start lg:overflow-y-auto">
             <div className="bg-forest-gradient relative overflow-hidden rounded-3xl p-7 text-forest-foreground shadow-lift">
               <div className="grain-dots absolute inset-0 opacity-30" aria-hidden />
               <div className="relative">
