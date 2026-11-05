@@ -111,12 +111,12 @@ function Finder() {
                   </div>
                 </div>
 
-                <p className="mt-7 text-xs font-semibold uppercase tracking-widest text-sun">Regional managers</p>
-                {salesProvince && <p className="mt-2 text-sm text-forest-foreground/75">{salesProvince}</p>}
+                <p className="mt-7 text-xs font-semibold uppercase tracking-widest text-sun">Regional sales rep</p>
+                {salesProvince && province && <p className="mt-2 text-sm text-forest-foreground/75">Covering {salesProvince}</p>}
                 <div className="mt-3 space-y-3">
                   {salesContacts.map((manager) => (
                     <div key={manager.region} className="border-t border-forest-foreground/20 pt-4 text-sm">
-                      <p className="text-xs text-forest-foreground/75">{manager.region}</p>
+                      {!province && <p className="text-xs text-forest-foreground/75">{manager.region}</p>}
                       <p className="mt-1 font-display text-lg font-bold">{manager.name}</p>
                       <a href={phoneLinks(manager.phone)[0]?.href ?? undefined} className="mt-3 flex items-center gap-2 hover:text-sun">
                         <Phone className="size-4 shrink-0" /> {manager.phone}
