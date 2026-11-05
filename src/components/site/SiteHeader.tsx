@@ -1,6 +1,6 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { ChevronDown, MapPin, Menu, X } from "lucide-react";
+import { ChevronDown, MapPin, Menu, Search, X } from "lucide-react";
 import logo from "@/assets/logo-coopers-shumba.png";
 import { getCategory, getChildren, topSections } from "@/lib/catalog";
 import { cn } from "@/lib/utils";
@@ -12,6 +12,17 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [mega, setMega] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [query, setQuery] = useState("");
+  const navigate = useNavigate();
+
+  const submitSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    const q = query.trim();
+    if (!q) return;
+    setOpen(false);
+    setQuery("");
+    navigate({ to: "/find-a-distributor", search: { q } });
+  };
 
   useEffect(() => {
     const on = () => setScrolled(window.scrollY > 12);
@@ -89,12 +100,17 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Link
-            to="/find-a-distributor"
-            className="hidden items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-glow transition-transform hover:-translate-y-0.5 sm:inline-flex"
-          >
-            <MapPin className="size-4" /> Find a Distributor
-          </Link>
+          <form onSubmit={submitSearch} className="hidden items-center gap-2 rounded-full border bg-card px-4 py-1 shadow-soft focus-within:ring-2 focus-within:ring-primary/40 md:flex">
+            <Search className="size-4 shrink-0 text-muted-foreground" />
+            <input
+              type="search"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search by town, store or province…"
+              aria-label="Search distributors by town, store or province"
+              className="w-44 bg-transparent py-1.5 text-sm outline-none placeholder:text-muted-foreground lg:w-56"
+            />
+          </form>
           <button className="rounded-full p-2 hover:bg-muted lg:hidden" onClick={() => setOpen((v) => !v)} aria-label="Toggle menu" aria-expanded={open}>
             {open ? <X /> : <Menu />}
           </button>
