@@ -1,0 +1,11 @@
+[
+  { "region": "Key Accounts Northern Region", "name": "Beauty Mafuta", "phone": "077 225 3905", "email": "beautym@ecomed.co.zw", "provinces": [] },
+  { "region": "Key Accounts Southern Region", "name": "Appolonia Magwala", "phone": "077 841 6226", "email": "amagwala@ecogrp.co.zw", "provinces": [] },
+  { "region": "Manicaland", "name": "Dr. Tatenda Mageja", "phone": "077 857 4945", "email": "mageja@ecomed.co.zw", "provinces": ["Manicaland"] },
+  { "region": "Mashonaland West", "name": "Tatenda Masarurwa", "phone": "077 461 3773", "email": "tatendam@ecomed.co.zw", "provinces": ["Mashonaland West"] },
+  { "region": "Mashonaland East", "name": "Harry Shumba", "phone": "071 573 9840", "email": "harrys@ecomed.co.zw", "provinces": ["Mashonaland East"] },
+  { "region": "Mashonaland Central", "name": "Vanessa Mandere", "phone": "077 654 7631", "email": "vanessam@ecomed.co.zw", "provinces": ["Mashonaland Central"] },
+  { "region": "Masvingo", "name": "Nichol Munyukwi", "phone": "078 666 3875", "email": "nicholm@ecomed.co.zw", "provinces": ["Masvingo"] },
+  { "region": "Matabeleland", "name": "Nathaniel Mukova", "phone": "077 268 1602", "email": "nathanielm@ecogrp.co.zw", "provinces": ["Matabeleland North", "Matabeleland South"] },
+  { "region": "Midlands", "name": "Joseph Magwangwa", "phone": "077 275 7072", "email": "josephm@ecomed.co.zw", "provinces": ["Midlands"] }
+]

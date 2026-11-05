@@ -1,4 +1,29 @@
 import branchesData from "@/data/branches.json";
+import regionalManagersData from "@/data/regional-managers.json";
+
+export type RegionalManager = {
+  region: string;
+  name: string;
+  phone: string;
+  email: string;
+  provinces: string[];
+};
+
+export const regionalManagers: RegionalManager[] = regionalManagersData;
+
+export function regionalManagersForProvince(province: string): RegionalManager[] {
+  return regionalManagers.filter((manager) => manager.provinces.includes(province));
+}
+
+export function contactProvince(province: string | null, query: string, results: Branch[]): string | null {
+  if (province) return province;
+  if (!query.trim() || results.length === 0) return null;
+  const q = query.trim().toLowerCase();
+  const townMatches = results.filter((branch) => branch.branch.toLowerCase().includes(q));
+  const areaResults = townMatches.length > 0 ? townMatches : results;
+  const matchedProvinces = new Set(areaResults.map((branch) => branch.province));
+  return matchedProvinces.size === 1 ? areaResults[0]?.province ?? null : null;
+}
 
 export type Branch = {
   id: number;

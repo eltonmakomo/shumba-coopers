@@ -1,9 +1,8 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { Mail, MapPin, Navigation, Phone, Search, Store, User, X } from "lucide-react";
 import { heroCattle } from "@/lib/catalog";
-import { offices } from "@/lib/company";
-import { branches, directionsUrl, phoneLinks, provinces, searchBranches, titleCase, type Branch } from "@/lib/distributors";
+import { branches, contactProvince, directionsUrl, phoneLinks, provinces, regionalManagers, regionalManagersForProvince, searchBranches, titleCase, type Branch } from "@/lib/distributors";
 import { cn } from "@/lib/utils";
 
 type Search = { province?: string; q?: string };
@@ -50,6 +49,8 @@ function Finder() {
   const results = useMemo(() => searchBranches(branches, q, province), [q, province]);
   const inProvince = province ? branches.filter((b) => b.province === province) : branches;
   const managers = new Set(inProvince.map((b) => b.manager)).size;
+  const salesProvince = contactProvince(province, q, results);
+  const salesContacts = salesProvince ? regionalManagersForProvince(salesProvince) : regionalManagers;
 
   return (
     <>
@@ -110,25 +111,25 @@ function Finder() {
                   </div>
                 </div>
 
-                <p className="mt-7 text-xs font-semibold uppercase tracking-widest text-sun">Sales enquiries</p>
+                <p className="mt-7 text-xs font-semibold uppercase tracking-widest text-sun">Regional managers</p>
+                {salesProvince && <p className="mt-2 text-sm text-forest-foreground/75">{salesProvince}</p>}
                 <div className="mt-3 space-y-3">
-                  {offices.map((o) => (
-                    <div key={o.city} className="glass-dark rounded-2xl p-4 text-sm">
-                      <p className="font-display text-base font-bold">Shumba Coopers {o.city}</p>
-                      <p className="mt-1 text-forest-foreground/75">{o.address.join(" ")}</p>
-                      <div className="mt-2 flex flex-col gap-1">
-                        {o.phones.map((p) => (
-                          <a key={p.label} href={p.href} className="inline-flex items-center gap-2 hover:text-sun">
-                            <Phone className="size-3.5" /> {p.label}
-                          </a>
-                        ))}
-                      </div>
+                  {salesContacts.map((manager) => (
+                    <div key={manager.region} className="border-t border-forest-foreground/20 pt-4 text-sm">
+                      <p className="text-xs text-forest-foreground/75">{manager.region}</p>
+                      <p className="mt-1 font-display text-lg font-bold">{manager.name}</p>
+                      <a href={phoneLinks(manager.phone)[0]?.href ?? undefined} className="mt-3 flex items-center gap-2 hover:text-sun">
+                        <Phone className="size-4 shrink-0" /> {manager.phone}
+                      </a>
+                      <a href={`mailto:${manager.email}`} className="mt-2 flex items-start gap-2 hover:text-sun">
+                        <Mail className="mt-0.5 size-4 shrink-0" /> <span className="min-w-0 break-all">{manager.email}</span>
+                      </a>
                     </div>
                   ))}
+                  {salesContacts.length === 0 && (
+                    <p className="text-sm text-forest-foreground/75">Regional manager assignment not yet confirmed for {salesProvince}.</p>
+                  )}
                 </div>
-                <Link to="/contact" className="mt-5 inline-flex text-sm font-semibold text-sun hover:underline">
-                  All contact details →
-                </Link>
               </div>
             </div>
           </aside>

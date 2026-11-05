@@ -12,3 +12,4 @@
 ## Project rules
 - Catalogue content lives in `src/data/*.json` (scraped verbatim from shumbacoopers.co.zw) and branches in `src/data/branches.json` (from the FCC branch list xlsx); pages read only through `src/lib/catalog.ts` and `src/lib/distributors.ts` so content stays single-sourced.
 - All category pages share one route `/category/$slug` keyed by the original site slugs, so every old menu item maps to exactly one page.
+- Regional contact records live in `src/data/regional-managers.json` and are exposed through `src/lib/distributors.ts`; explicit coverage mappings keep finder assignments single-sourced without guessing key accounts coverage.
