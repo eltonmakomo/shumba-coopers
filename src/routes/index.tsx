@@ -31,7 +31,7 @@ function Index() {
       <h1 className="sr-only">Shumba Coopers — Promoting healthy livestock</h1>
       <HeroSlider
         aside={
-          <div className="glass relative rounded-3xl p-6 text-foreground shadow-lift animate-float-slow">
+          <div className="glass relative w-full rounded-3xl p-6 text-foreground shadow-lift animate-float-slow lg:ml-auto lg:w-2/3">
             <p className="text-xs font-semibold uppercase tracking-widest text-primary">Find your distributor</p>
             <p className="mt-2 font-display text-2xl font-bold">{branches.length} stores across {provinces.length} provinces</p>
             <Link to="/find-a-distributor" className="mt-5 flex items-center justify-center gap-2 rounded-2xl bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground shadow-glow transition-transform hover:-translate-y-0.5">
