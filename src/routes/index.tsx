@@ -78,7 +78,7 @@ function Index() {
         </div>
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {species.map((s, i) => (
-            <div key={s.slug} className={i === 0 ? "sm:col-span-2 lg:row-span-2" : ""}>
+            <div key={s.slug} className={i === 0 ? "h-full sm:col-span-2 lg:row-span-2" : "h-full"}>
               <CategoryCard node={s} large={i === 0} />
             </div>
           ))}

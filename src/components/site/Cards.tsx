@@ -37,7 +37,7 @@ export function CategoryCard({ node, large = false }: { node: CategoryNode; larg
     <Link
       to="/category/$slug"
       params={{ slug: node.slug }}
-      className={`group relative isolate flex flex-col justify-end overflow-hidden rounded-3xl bg-forest shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-lift ${large ? "min-h-80" : "min-h-56"}`}
+      className={`group relative isolate flex h-full flex-col justify-end overflow-hidden rounded-3xl bg-forest shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-lift ${large ? "min-h-80" : "min-h-56"}`}
     >
       <img src={imageFor(node)} alt="" loading="lazy" className="absolute inset-0 -z-10 size-full object-cover transition-transform duration-700 group-hover:scale-110" />
       <div className="bg-fade-overlay absolute inset-0 -z-10" aria-hidden />
